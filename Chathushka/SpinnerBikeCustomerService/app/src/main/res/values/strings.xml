@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">      Spinner </string>
+    <string name="LoginBtn">Login</string>
+    <string name="LoginText">Lets Get Started !</string>
+    <string name="Emailtxt">Enter Email</string>
+    <string name="PasswordTxt">Enter Password</string>
+    <string name="UserProfiletxt">User Profile</string>
+    <string name="UpdateProfileButton">Update</string>
+    <string name="DeleteProfileButton">Delete</string>
+</resources>
