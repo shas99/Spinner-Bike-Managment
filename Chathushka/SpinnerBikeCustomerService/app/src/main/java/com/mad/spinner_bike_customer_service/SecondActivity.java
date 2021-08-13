@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class SecondActivity extends AppCompatActivity {
     Button button;
+    Button button2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +23,21 @@ public class SecondActivity extends AppCompatActivity {
                 openNewActivity();
             }
         });
+
+        button2 = (Button) findViewById(R.id.deletebtn);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNewActivity2();
+            }
+        });
     }
     public void openNewActivity(){
         Intent intent = new Intent(this, ThirdActivity.class);
+        startActivity(intent);
+    }
+    public void openNewActivity2(){
+        Intent intent = new Intent(this, FifthActivity.class);
         startActivity(intent);
     }
 }
