@@ -23,10 +23,11 @@
     <string name="getUserAddresss" />
     <string name="getUserMobileNo" />
     <string name="getBikeID">"Enter Order ID : "</string>
-    <string name="searchBtn">Search</string>
+    <string name="searchBtn">Go</string>
     <string name="homeBtn">Home</string>
     <string name="deleteOrder">Delete</string>
     <string name="creditCard">Credit Card</string>
+    <string name="LoginMainGreeting">Spinner</string>
 
     <string-array name="bikes">
         <item>BMX Drift -  Price 12K</item>
