@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Shasvathan/AndroidStudioProjects/Spinner/app/src/main/res/drawable/custom_button.xml" value="0.1125" />
+        <entry key="..\:/Users/Shasvathan/AndroidStudioProjects/Spinner/app/src/main/res/drawable/custom_round_button.xml" value="0.1125" />
+        <entry key="..\:/Users/Shasvathan/AndroidStudioProjects/Spinner/app/src/main/res/layout/activity_donate.xml" value="0.25" />
+        <entry key="..\:/Users/Shasvathan/AndroidStudioProjects/Spinner/app/src/main/res/layout/activity_end_target.xml" value="0.33" />
+        <entry key="..\:/Users/Shasvathan/AndroidStudioProjects/Spinner/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Shasvathan/AndroidStudioProjects/Spinner/app/src/main/res/layout/activity_payment.xml" value="0.33" />
+        <entry key="..\:/Users/Shasvathan/AndroidStudioProjects/Spinner/app/src/main/res/layout/activity_rent2.xml" value="0.33" />
+        <entry key="..\:/Users/Shasvathan/AndroidStudioProjects/Spinner/app/src/main/res/layout/activity_rent3.xml" value="0.33" />
+        <entry key="..\:/Users/Shasvathan/AndroidStudioProjects/Spinner/app/src/main/res/layout/activity_target.xml" value="0.22" />
+        <entry key="..\:/Users/Shasvathan/AndroidStudioProjects/Spinner/app/src/main/res/layout/activity_weekly_target.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
