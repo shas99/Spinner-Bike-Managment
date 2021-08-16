@@ -13,10 +13,10 @@
             android:name=".Event2"
             android:exported="true" />
         <activity
-            android:name=".Event"
+            android:name=".Event1"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".EvwntsMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

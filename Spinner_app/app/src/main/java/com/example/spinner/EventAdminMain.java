@@ -1,13 +1,12 @@
-package com.example.eventadmin;
+package com.example.spinner;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.content.Intent;
-
-import android.os.Bundle;
 import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -39,11 +38,11 @@ public class EventAdminMain extends AppCompatActivity {
         });
     }
     public void openNewActivity(){
-        Intent intent = new Intent(this, Event_Create.class);
+        Intent intent = new Intent(this, com.example.spinner.Event_Create.class);
         startActivity(intent);
     }
     public void openNewActivity1(){
-        Intent intent1 = new Intent(this, Delete_Event.class);
+        Intent intent1 = new Intent(this, com.example.spinner.Delete_Event.class);
         startActivity(intent1);
     }
 }

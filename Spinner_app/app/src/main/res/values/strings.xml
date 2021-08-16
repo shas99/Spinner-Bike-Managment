@@ -132,6 +132,40 @@
     <string name="image_vvv">image_vvv</string>
     <string name="ok_button_id">OK</string>
 
+    <string name="spinner_open_tout_2021">Spinner Open Tour 2021</string>
+    <string name="txtfranceTour">France Tour 2021</string>
+    <string name="captE2">France Tour 2021</string>
+    <string name="Date1">10/10/2021 to 12/10/2021</string>
+    <string name="description1">France Tour 2021 will start on 10th of October. Registration is now open. Register Now!</string>
+    <string name="DescriptionLink">https://bit.ly/fdnFG=dvT</string>
+    <string name="Caption1">Spinner Open Tour 2021</string>
+    <string name="Date2">08/21/2021 to 08/28/2021</string>
+    <string name="Description3">Spinner Open Tour 2021 will start on 21st August 2021.  Confirm your participation!</string>
+    <string name="swtBtn">I\'m going</string>
+
+
+        <string name="textBTN">Text</string>
+        <string name="searchBtn1">Search</string>
+        <string name="editBtn">Edit</string>
+        <string name="deleteBtn">Delete</string>
+        <string name="swchBtn">Publish</string>
+        <string name="addbnrBtn">Add Banner</string>
+        <string name="captionE">7 Days Event</string>
+        <string name="DateE">20/11/2021 to 22/11/2021</string>
+        <string name="DescriptionE">Comming soon!</string>
+        <string name="btnDone">Done</string>
+        <string name="DeleteText">What is the reason to delete this event?</string>
+        <string name="deleteReason">Testing Delete</string>
+        <string name="delleteBtn">Delete</string>
+        <string name="CreateEN">Event Name</string>
+        <string name="EventSD">Starting Date</string>
+        <string name="EventED">Ending Date</string>
+        <string name="createDes">Description</string>
+        <string name="CreateEData">7 Day Event</string>
+        <string name="DataDate">20/11/2021</string>
+        <string name="DataEdate">22/11/2021</string>
+        <string name="dataDes">Comming soon!</string>
+
     <string-array name="bikes">
         <item>BMX Drift -  Price 12K</item>
         <item>TomaHawk Xander - Price 34K</item>

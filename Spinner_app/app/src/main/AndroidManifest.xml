@@ -117,34 +117,55 @@ package="com.example.spinner">
 
     <activity
         android:name=".Upgrades_1"
-        android:exported="true">
-
-    </activity>
+        android:exported="true"/>
 
     <activity
         android:name=".Upgrades_2"
-        android:exported="true">
-
-
-    </activity>
+        android:exported="true"/>
 
     <activity
         android:name=".BicycleMainMenuActivity"
+        android:exported="true"/>
+
+    <activity
+        android:name=".Event1"
+        android:exported="true" />
+
+
+    <activity
+        android:name=".Event2"
+        android:exported="true"/>
+
+    <activity
+        android:name=".EventsMainActivity"
+        android:exported="true"/>
+
+    <activity
+        android:name=".Delete_Event"
+        android:exported="true"/>
+
+    <activity
+        android:name=".Edit_Event"
+        android:exported="true"/>
+
+    <activity
+        android:name=".Event_Create"
+        android:exported="true"/>
+
+    <activity
+        android:name=".EventAdminMain"
         android:exported="true">
-
-
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
-
-
     </activity>
 
     <meta-data
         android:name="preloaded_fonts"
-        android:resource="@array/preloaded_fonts" />
+        android:resource="@array/preloaded_fonts"
+        />
 </application>
 
 </manifest>
