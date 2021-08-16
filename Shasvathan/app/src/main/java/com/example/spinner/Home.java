@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class Home extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
 
         Button b1=(Button)findViewById(R.id.btnRent);
         Button b2=(Button)findViewById(R.id.btnDonate);
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent i = new Intent(MainActivity.this,Rent2.class);
+                Intent i = new Intent(Home.this,Rent2.class);
                 startActivity(i);
         }
 
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this,Donate.class);
+                Intent i = new Intent(Home.this,Donate.class);
                 startActivity(i);
             }
         });

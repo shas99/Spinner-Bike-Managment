@@ -19,7 +19,7 @@ public class Rent2 extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent i = new Intent(Rent2.this,MainActivity.class);
+                Intent i = new Intent(Rent2.this, Home.class);
                 startActivity(i);
             }
 
