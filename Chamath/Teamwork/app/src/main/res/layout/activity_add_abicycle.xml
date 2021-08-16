@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical"
+    tools:context=".Add_A_Bicycle">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_01"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="@string/txt_01"
+                android:textColor="@color/blue_100"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/im5"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="@string/letsride"
+                app:srcCompat="@drawable/_349563" />
+
+            <Button
+                android:id="@+id/button_01"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="@string/but_01"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/blue_100"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="@string/img"
+                app:srcCompat="@drawable/_349714" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="@string/but_01"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="@string/image_vvv"
+                app:srcCompat="@drawable/_336205" />
+
+            <Button
+                android:id="@+id/button_4"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="@string/but_01"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="5dp"
+                app:srcCompat="@drawable/_972185" />
+
+            <Button
+                android:id="@+id/button_005"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="@string/but_01"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/img_bott"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="5dp"
+                app:srcCompat="@drawable/_357488" />
+
+            <Button
+                android:id="@+id/img_bott2"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="@string/but_01"
+                android:textSize="20sp"
+                android:textStyle="bold"></Button>
+
+            <ImageView
+                android:id="@+id/image_bottom"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="5dp"
+                app:srcCompat="@drawable/d" />
+
+            <Button
+                android:id="@+id/image_bottom2"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="@string/but_01"
+                android:textSize="20sp"
+                android:textStyle="bold">
+
+            </Button>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
