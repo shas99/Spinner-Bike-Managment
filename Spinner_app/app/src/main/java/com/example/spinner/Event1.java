@@ -1,10 +1,10 @@
-package com.example.spinnerevents;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.spinner;
 
 import android.os.Bundle;
 
-public class Event extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Event1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

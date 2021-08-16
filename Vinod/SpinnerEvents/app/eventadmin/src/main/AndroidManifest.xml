@@ -10,16 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SpinnerEvents">
         <activity
-            android:name=".xxx"
-            android:exported="true" />
-        <activity
             android:name=".Delete_Event"
             android:exported="true" />
         <activity
             android:name=".Edit_Event"
             android:exported="true" />
         <activity
-            android:name=".Create"
+            android:name=".Event_Create"
             android:exported="true" />
         <activity
             android:name=".EventAdminMain"

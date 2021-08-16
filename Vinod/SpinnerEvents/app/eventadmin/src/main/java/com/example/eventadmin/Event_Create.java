@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
 
-public class Create extends AppCompatActivity {
+public class Event_Create extends AppCompatActivity {
 
     Button buttonNext;
 
