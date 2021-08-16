@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Payment">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.136"
+        app:srcCompat="@drawable/outline_contactless_black_48" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="118dp"
+        android:layout_height="63dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="monospace"
+        android:text="@string/Paymenttxt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.731" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="147dp"
+        android:layout_height="122dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.416">
+
+        <TextView
+            android:id="@+id/BikeIDView"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:fontFamily="serif"
+            android:text="@string/cycleID" />
+
+        <TextView
+            android:id="@+id/PricetxtView"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:fontFamily="serif"
+            android:text="@string/Price" />
+
+        <TextView
+            android:id="@+id/TotalTimeview"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:fontFamily="serif"
+            android:text="@string/TtimeView" />
+
+        <TextView
+            android:id="@+id/RedeemView"
+            android:layout_width="157dp"
+            android:layout_height="36dp"
+            android:fontFamily="cursive"
+            android:text="@string/Redeem" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="197dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.465">
+
+        <TextView
+            android:id="@+id/IDtxtview"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/ID" />
+
+        <TextView
+            android:id="@+id/PaymentView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/toPay" />
+
+        <TextView
+            android:id="@+id/TimeViewtxt"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/Timef" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
