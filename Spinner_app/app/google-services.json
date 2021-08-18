@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "788840336815",
+    "project_id": "spinner-mobile-application",
+    "storage_bucket": "spinner-mobile-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788840336815:android:54dcd43a2974e4a480b35a",
+        "android_client_info": {
+          "package_name": "com.example.spinner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788840336815-1038qovlnva0k2ut54jn4k15l0olr9ta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQnjXUyxg-kUPS53DRxeUGn56nMg7fe_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788840336815-1038qovlnva0k2ut54jn4k15l0olr9ta.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788840336815:android:4bd641004a6ba2fa80b35a",
+        "android_client_info": {
+          "package_name": "com.mad.mad_oblivion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788840336815-1038qovlnva0k2ut54jn4k15l0olr9ta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQnjXUyxg-kUPS53DRxeUGn56nMg7fe_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788840336815-1038qovlnva0k2ut54jn4k15l0olr9ta.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

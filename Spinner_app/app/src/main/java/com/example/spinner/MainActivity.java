@@ -4,13 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button button;
 
+private TextView register;
 
 
 
@@ -18,23 +19,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button = (Button) findViewById(R.id.btnLogin);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openNewActivity();
-            }
-        });
+register=(TextView) findViewById(R.id.register);
+
+register.setOnClickListener(this);
 
 
 
     }
 
-    public void openNewActivity(){
-        Intent intent = new Intent(this, UserProfileActivity.class);
-        startActivity(intent);
+
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()){
+            case R.id.register:
+                startActivity(new Intent(this,CreateProfileActivity.class));
+                break;
+        }
     }
-
-
-
 }
