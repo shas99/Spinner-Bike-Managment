@@ -7,7 +7,7 @@
     tools:context=".Event_Create">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/emailBanner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="51dp"
@@ -30,7 +30,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/emailInput" />
 
     <TextView
         android:id="@+id/textView4"
@@ -79,7 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/emailInput"
         android:layout_width="301dp"
         android:layout_height="42dp"
         android:layout_marginStart="49dp"
@@ -92,7 +92,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/emailBanner" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
