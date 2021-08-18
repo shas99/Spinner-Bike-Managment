@@ -45,7 +45,7 @@
         app:srcCompat="@drawable/images" />
 
     <ImageView
-        android:id="@+id/camerPic"
+        android:id="@+id/imageView11"
         android:layout_width="128dp"
         android:layout_height="147dp"
         app:layout_constraintBottom_toBottomOf="parent"

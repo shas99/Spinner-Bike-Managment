@@ -11,7 +11,7 @@
     tools:context=".Ratings">
 
     <TextView
-        android:id="@+id/emailDisplay"
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -194,7 +194,7 @@
         android:layout_height="200dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/emailDisplay"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
