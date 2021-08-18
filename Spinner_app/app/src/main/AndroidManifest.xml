@@ -1,113 +1,173 @@
-<?xml version="1.0" encoding="utf-8"?>
+
+
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.spinner">
+package="com.example.spinner">
 
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="true" />
+<application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.SpinnerBikeCustomerService">
+    <activity android:name=".OrderBikeDetailsActivity"></activity>
+    <activity android:name=".SearchBikeOrder"></activity>
+    <activity android:name=".ShipBikeActivity" />
+    <activity android:name=".OrderBikeActivity" />
+    <activity android:name=".LiveChatActivity" />
+    <activity android:name=".CreateProfileActivity" />
+    <activity android:name=".UserProfileActivity" />
+    <activity android:name=".MainActivity">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.SpinnerBikeCustomerService">
-        <activity
-            android:name=".ForgotPasswordActivity"
-            android:exported="true" />
-        <activity android:name=".OrderBikeDetailsActivity" />
-        <activity android:name=".SearchBikeOrder" />
-        <activity android:name=".ShipBikeActivity" />
-        <activity android:name=".OrderBikeActivity" />
-        <activity android:name=".LiveChatActivity" />
-        <activity android:name=".CreateProfileActivity" />
-        <activity android:name=".UserProfileActivity" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Home"
-            android:exported="true" />
-        <activity
-            android:name=".Rent2"
-            android:exported="true" />
-        <activity
-            android:name=".Rent3"
-            android:exported="true"></activity>
-        <activity
-            android:name=".Donate"
-            android:exported="true" />
-        <activity
-            android:name=".Payment"
-            android:exported="true" />
-        <activity
-            android:name=".end_target"
-            android:exported="true" />
-        <activity
-            android:name=".Weekly_target"
-            android:exported="true" />
-        <activity
-            android:name=".Target"
-            android:exported="true" />
-        <activity
-            android:name=".Add_A_Bicycle"
-            android:exported="true"></activity>
-        <activity
-            android:name=".Bike_Info"
-            android:exported="true"></activity>
-        <activity
-            android:name=".Bicycle_List"
-            android:exported="true"></activity>
-        <activity
-            android:name=".My_Delete"
-            android:exported="true"></activity>
-        <activity
-            android:name=".Ratings"
-            android:exported="true"></activity>
-        <activity
-            android:name=".Review_Page"
-            android:exported="true"></activity>
-        <activity
-            android:name=".Upgrades_1"
-            android:exported="true" />
-        <activity
-            android:name=".Upgrades_2"
-            android:exported="true" />
-        <activity
-            android:name=".BicycleMainMenuActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Event1"
-            android:exported="true" />
-        <activity
-            android:name=".Event2"
-            android:exported="true" />
-        <activity
-            android:name=".EventsMainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Delete_Event"
-            android:exported="true" />
-        <activity
-            android:name=".Edit_Event"
-            android:exported="true" />
-        <activity
-            android:name=".Event_Create"
-            android:exported="true" />
-        <activity
-            android:name=".EventAdminMain"
-            android:exported="true" />
 
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
-    </application>
+    <activity
+        android:name=".Home"
+        android:exported="true"/>
+
+
+
+
+    <activity
+        android:name=".Rent2"
+        android:exported="true"/>
+
+
+    <activity
+        android:name=".Rent3"
+        android:exported="true">
+
+    </activity>
+
+
+    <activity
+        android:name=".Donate"
+        android:exported="true"/>
+
+    <activity
+        android:name=".Payment"
+        android:exported="true"/>
+
+    <activity
+        android:name=".end_target"
+        android:exported="true"/>
+
+
+    <activity
+        android:name=".Weekly_target"
+        android:exported="true"/>
+
+
+
+
+   <activity
+        android:name=".Target"
+       android:exported="true"/>
+
+
+    <activity
+        android:name=".Add_A_Bicycle"
+        android:exported="true">
+
+
+
+
+    </activity>
+
+    <activity
+        android:name=".Bike_Info"
+        android:exported="true">
+
+
+
+
+
+    </activity>
+
+    <activity
+        android:name=".Bicycle_List"
+        android:exported="true">
+
+
+
+
+    </activity>
+
+    <activity
+        android:name=".My_Delete"
+        android:exported="true">
+
+    </activity>
+
+    <activity
+        android:name=".Ratings"
+        android:exported="true">
+
+
+    </activity>
+
+    <activity
+        android:name=".Review_Page"
+        android:exported="true">
+
+
+
+
+    </activity>
+
+    <activity
+        android:name=".Upgrades_1"
+        android:exported="true"/>
+
+    <activity
+        android:name=".Upgrades_2"
+        android:exported="true"/>
+
+    <activity
+        android:name=".BicycleMainMenuActivity"
+        android:exported="true"/>
+
+    <activity
+        android:name=".Event1"
+        android:exported="true" />
+
+
+    <activity
+        android:name=".Event2"
+        android:exported="true"/>
+
+    <activity
+        android:name=".EventsMainActivity"
+        android:exported="true"/>
+
+    <activity
+        android:name=".Delete_Event"
+        android:exported="true"/>
+
+    <activity
+        android:name=".Edit_Event"
+        android:exported="true"/>
+
+    <activity
+        android:name=".Event_Create"
+        android:exported="true"/>
+
+    <activity
+        android:name=".EventAdminMain"
+        android:exported="true"/>
+
+
+    <meta-data
+        android:name="preloaded_fonts"
+        android:resource="@array/preloaded_fonts"
+        />
+</application>
 
 </manifest>
