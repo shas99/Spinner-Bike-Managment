@@ -144,27 +144,27 @@
     <string name="swtBtn">I\'m going</string>
 
 
-        <string name="textBTN">Text</string>
-        <string name="searchBtn1">Search</string>
-        <string name="editBtn">Edit</string>
-        <string name="deleteBtn">Delete</string>
-        <string name="swchBtn">Publish</string>
-        <string name="addbnrBtn">Add Banner</string>
-        <string name="captionE">7 Days Event</string>
-        <string name="DateE">20/11/2021 to 22/11/2021</string>
-        <string name="DescriptionE">Comming soon!</string>
-        <string name="btnDone">Done</string>
-        <string name="DeleteText">What is the reason to delete this event?</string>
-        <string name="deleteReason">Testing Delete</string>
-        <string name="delleteBtn">Delete</string>
-        <string name="CreateEN">Event Name</string>
-        <string name="EventSD">Starting Date</string>
-        <string name="EventED">Ending Date</string>
-        <string name="createDes">Description</string>
-        <string name="CreateEData">7 Day Event</string>
-        <string name="DataDate">20/11/2021</string>
-        <string name="DataEdate">22/11/2021</string>
-        <string name="dataDes">Comming soon!</string>
+    <string name="textBTN">Text</string>
+    <string name="searchBtn1">Search</string>
+    <string name="editBtn">Edit</string>
+    <string name="deleteBtn">Delete</string>
+    <string name="swchBtn">Publish</string>
+    <string name="addbnrBtn">Add Banner</string>
+    <string name="captionE">7 Days Event</string>
+    <string name="DateE">20/11/2021 to 22/11/2021</string>
+    <string name="DescriptionE">Comming soon!</string>
+    <string name="btnDone">Done</string>
+    <string name="DeleteText">What is the reason to delete this event?</string>
+    <string name="deleteReason">Testing Delete</string>
+    <string name="delleteBtn">Delete</string>
+    <string name="CreateEN">Event Name</string>
+    <string name="EventSD">Starting Date</string>
+    <string name="EventED">Ending Date</string>
+    <string name="createDes">Description</string>
+    <string name="CreateEData">7 Day Event</string>
+    <string name="DataDate">20/11/2021</string>
+    <string name="DataEdate">22/11/2021</string>
+    <string name="dataDes">Comming soon!</string>
 
     <string-array name="bikes">
         <item>BMX Drift -  Price 12K</item>
