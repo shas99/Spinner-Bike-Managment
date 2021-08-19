@@ -21,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 public class UserProfileActivity extends AppCompatActivity {
 
 private Button logout;
+private Button orderAbikebtn;
 
 private FirebaseUser user;
 private DatabaseReference reference;
@@ -43,7 +44,27 @@ private String userID;
 
 
             }
+
+
+
         });
+        orderAbikebtn =(Button)findViewById(R.id.orderABikeBtn);
+        orderAbikebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserProfileActivity.this, OrderBikeActivity.class);
+                startActivity(intent);
+
+
+
+            }
+        });
+
+
+
+
+
+
 
         user =FirebaseAuth.getInstance().getCurrentUser();
         reference= FirebaseDatabase.getInstance().getReference("UsersProfile");
@@ -52,6 +73,7 @@ private String userID;
         final TextView greetTextView= (TextView) findViewById(R.id.emailDisplay);
         final TextView nameTextView = (TextView) findViewById(R.id.nameDisplay);
         final TextView gender = (TextView) findViewById(R.id.sexDisplay);
+        final TextView mobileNumber =(TextView) findViewById(R.id.mobileNumberDisplay);
 
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -63,10 +85,12 @@ private String userID;
                     String name =userProfile.name;
                     String email=userProfile.email;
                     String sex =userProfile.sex;
+                    String mobile =userProfile.mobileNo;
 
-                    nameTextView.setText("Welcome " +name+ "!");
+                    nameTextView.setText("Welcome " +name+ " !  ");
                     greetTextView.setText(email);
                     gender.setText(sex);
+                    mobileNumber.setText(mobile);
 
 
 
@@ -86,5 +110,6 @@ private String userID;
 
 
     }
+
 
     }
