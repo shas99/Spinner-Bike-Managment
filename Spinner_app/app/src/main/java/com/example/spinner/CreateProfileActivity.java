@@ -28,7 +28,7 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
     private TextView emailBanner;
     private Button registerUser;
 
-    private EditText emailInput,nameInput,passwordInput,sexInput;
+    private EditText emailInput,nameInput,passwordInput,sexInput,mobileNumberInput;
 
     private static final int CAMERA_REQUEST =1888;
     ImageView imageView;
@@ -52,6 +52,7 @@ emailInput =(EditText) findViewById(R.id.emailInput);
 nameInput=(EditText) findViewById(R.id.nameInput);
 passwordInput=(EditText) findViewById(R.id.passwordInput);
 sexInput=(EditText) findViewById(R.id.sexInput);
+mobileNumberInput=(EditText)findViewById(R.id.mobileNumberInput);
 
 imageView =(ImageView) findViewById(R.id.camerPic);
 Button photoButton =(Button) findViewById(R.id.uploadBtn);
@@ -94,6 +95,7 @@ photoButton.setOnClickListener(new View.OnClickListener() {
         String name =nameInput.getText().toString().trim();
         String password =passwordInput.getText().toString().trim();
         String sex =sexInput.getText().toString().trim();
+        String mobileNo =mobileNumberInput.getText().toString().trim();
 
 
         if(name.isEmpty()){
@@ -114,6 +116,11 @@ photoButton.setOnClickListener(new View.OnClickListener() {
             sexInput.requestFocus();
             return;
         }
+        if(mobileNo.isEmpty()){
+            mobileNumberInput.setError("Phone number is required");
+            mobileNumberInput.requestFocus();
+            return;
+        }
 
 
         mAuth.createUserWithEmailAndPassword(email,password)
@@ -121,7 +128,7 @@ photoButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                     public void onComplete(@NonNull Task<AuthResult> task){
         if(task.isSuccessful()){
-                  User user =new User(name,email,sex);
+                  User user =new User(name,email,sex,mobileNo);
 
                              FirebaseDatabase.getInstance().getReference("UsersProfile")
                                      .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
