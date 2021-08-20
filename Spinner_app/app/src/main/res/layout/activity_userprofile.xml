@@ -102,7 +102,7 @@
         android:layout_height="204dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.024"
@@ -133,10 +133,10 @@
 
     <TextView
         android:id="@+id/nameDisplay"
-        android:layout_width="376dp"
-        android:layout_height="70dp"
+        android:layout_width="371dp"
+        android:layout_height="138dp"
         android:textColor="#020202"
-        android:textSize="34sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
