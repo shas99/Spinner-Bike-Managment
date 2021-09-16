@@ -11,6 +11,15 @@ public class Home extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //user details
+        String name = UserDetails.getName();
+        String email = UserDetails.getEmail();
+        String phone = UserDetails.getMobileNo();
+        String sex = UserDetails.getSex();
+        String points = UserDetails.getPoints();
+
+        System.out.println("Details are : " + "Name:" + name + " Email:" + email + " Mobile Number:" + phone + " Sex:" + sex + " Points:" + points);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
