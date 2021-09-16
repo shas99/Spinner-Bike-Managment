@@ -2,6 +2,7 @@ package com.example.spinner;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Patterns;
@@ -128,7 +129,7 @@ photoButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                     public void onComplete(@NonNull Task<AuthResult> task){
         if(task.isSuccessful()){
-                  User user =new User(name,email,sex,mobileNo);
+                  User user =new User(name,email,sex,mobileNo,"100");
 
                              FirebaseDatabase.getInstance().getReference("UsersProfile")
                                      .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {

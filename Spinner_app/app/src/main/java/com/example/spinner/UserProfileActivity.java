@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import java.util.*;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -95,6 +95,9 @@ private String userID;
                     String email=userProfile.email;
                     String sex =userProfile.sex;
                     String mobile =userProfile.mobileNo;
+                    String points = userProfile.Points;
+                    //saving userDetails
+                    UserDetails U1 = new UserDetails(name,email,sex,mobile,points);
 
                     nameTextView.setText("Welcome " +name+ " !  ");
                     greetTextView.setText(email);
@@ -113,7 +116,7 @@ private String userID;
             public void onCancelled(@NonNull DatabaseError error) {
 
                 Toast.makeText(UserProfileActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
-                
+
             }
         });
 
