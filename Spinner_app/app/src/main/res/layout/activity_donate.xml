@@ -40,6 +40,7 @@
         android:layout_height="81dp"
         android:background="@drawable/custom_button"
         android:fontFamily="monospace"
+        android:onClick="update_1"
         android:text="@string/Donatebtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

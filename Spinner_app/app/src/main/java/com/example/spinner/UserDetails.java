@@ -1,16 +1,24 @@
 package com.example.spinner;
 
 public class UserDetails {
-    private static String name,email,sex,mobileNo,points;
+    private static String name,email,sex,mobileNo,points,ID;
 
-    UserDetails(String name, String email, String sex, String mobileNo,String Points) {
+    UserDetails(String name, String email, String sex, String mobileNo,String Points,String ID) {
         this.name = name;
         this.email = email;
         this.sex = sex;
         this.mobileNo = mobileNo;
         this.points = Points;
+        this.ID = ID;
 
+    }
 
+    public static void setPoints(String points) {
+        UserDetails.points = points;
+    }
+
+    public static String ID(){
+        return ID;
     }
     public static String getName(){
         return name;
