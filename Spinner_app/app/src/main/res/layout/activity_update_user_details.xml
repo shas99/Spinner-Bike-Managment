@@ -2,13 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/UpdateEmailInput"
+    android:id="@+id/UpdateEmailInput500"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UpdateUserDetailsActivity">
 
     <TextView
-        android:id="@+id/UpdateBanner"
+        android:id="@+id/UpdateBanner1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="UPDATE DATA "
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.11" />
 
     <EditText
-        android:id="@+id/UpdateEmailText"
+        android:id="@+id/UpdateEmailText500"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -32,11 +32,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UpdateBanner"
+        app:layout_constraintTop_toBottomOf="@+id/UpdateBanner1"
         app:layout_constraintVertical_bias="0.195" />
 
     <EditText
-        android:id="@+id/NameUpdateText"
+        android:id="@+id/NameUpdateText500"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -46,11 +46,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UpdateEmailText"
+        app:layout_constraintTop_toBottomOf="@+id/UpdateEmailText500"
         app:layout_constraintVertical_bias="0.186" />
 
     <EditText
-        android:id="@+id/MobileNumberUpdate"
+        android:id="@+id/MobileNumberUpdate500"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -60,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NameUpdateText"
+        app:layout_constraintTop_toBottomOf="@+id/NameUpdateText500"
         app:layout_constraintVertical_bias="0.314" />
 
     <Button
