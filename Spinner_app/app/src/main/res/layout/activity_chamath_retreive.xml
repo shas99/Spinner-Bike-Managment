@@ -16,7 +16,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@mipmap/ic_launcher"
-        android:layout_centerVertical="true"
         android:id="@+id/cham1"
         app:civ_border_width="2dp"
         app:civ_border_color="#FF000000"/>
@@ -39,8 +38,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/nametext2"
             android:text="Name"
-            android:textSize="25sp"
-            android:textStyle="bold"
+            android:textSize="20sp"
             android:textColor="#000"
             android:layout_toRightOf="@+id/cham1"
             android:layout_below="@+id/nametext"
@@ -53,14 +51,39 @@
             android:layout_height="wrap_content"
             android:id="@+id/nametext3"
             android:text="Origin"
-            android:textSize="25sp"
-            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textStyle="italic"
             android:textColor="#000"
             android:layout_toRightOf="@+id/cham1"
             android:layout_below="@+id/nametext2"
             android:layout_marginLeft="10dp"
 
             />
+        
+        <LinearLayout
+            android:layout_below="@+id/nametext3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="Cycler Opinion"
+                android:textAllCaps="false"
+                android:layout_marginRight="5dp"
+                android:id="@+id/btnEdit"/>
+
+            <Button
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="Remove Bicycle"
+                android:textAllCaps="false"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/btnDelete"/>
+
+
+        </LinearLayout>
 
     </RelativeLayout>
 
