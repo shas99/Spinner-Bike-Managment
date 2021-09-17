@@ -12,5 +12,4 @@ public User(){}
         this.Points = Points;
 
     }
-
 }
