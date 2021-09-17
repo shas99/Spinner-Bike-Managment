@@ -3,25 +3,16 @@ package com.example.spinner;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 
@@ -44,9 +35,9 @@ EditText emailEdit,nameEdit,phoneEdit;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_user_details);
 
-        emailEdit=findViewById(R.id.UpdateEmailInput);
-        nameEdit=findViewById(R.id.NameUpdateText);
-        phoneEdit=findViewById(R.id.MobileNumberUpdate);
+        emailEdit=findViewById(R.id.UpdateEmailInput500);
+        nameEdit=findViewById(R.id.NameUpdateText500);
+        phoneEdit=findViewById(R.id.MobileNumberUpdate500);
         updateBtn1=findViewById(R.id.updateDetailsBtn);
 
 updateBtn1.setOnClickListener(new View.OnClickListener() {
