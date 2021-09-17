@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,7 +15,15 @@ private Button button;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rent2);
 
-        button = (Button) findViewById(R.id.btnChoose);
+
+        String points = UserDetails.getPoints();
+        TextView point = (TextView) findViewById(R.id.points55);
+        point.setText(points);
+
+
+
+
+        button = (Button) findViewById(R.id.btnChoose5);
         button.setOnClickListener(new View.OnClickListener() {
 
 
@@ -27,7 +36,7 @@ private Button button;
 
         }
     public void openActivity2(){
-        Intent intent = new Intent(this,Confirm.class);
+        Intent intent = new Intent(Rent2.this,Rent3.class);
         startActivity(intent);
     }
 

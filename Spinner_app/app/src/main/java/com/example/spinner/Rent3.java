@@ -14,12 +14,12 @@ public class Rent3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rent3);
 
-        Button b1=(Button)findViewById(R.id.btnChoose);
+        Button b1=(Button)findViewById(R.id.StartRidingbtn);
 
         b1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent i = new Intent(Rent3.this, end_target.class);
+                Intent i = new Intent(Rent3.this, End_target.class);
                 startActivity(i);
             }
 
