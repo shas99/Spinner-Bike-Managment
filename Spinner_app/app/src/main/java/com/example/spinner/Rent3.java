@@ -7,7 +7,13 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Rent3 extends AppCompatActivity {
+
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +25,22 @@ public class Rent3 extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
+
+                rootNode = FirebaseDatabase.getInstance();
+                reference = rootNode.getReference("LiveBike");
+
+
+                Help helperHelp = new Help(UserDetails.ID(),"Test Success 5th attempt! :)");
+
+                reference.child("labadaba dub dub").setValue(helperHelp);
+
+
                 Intent i = new Intent(Rent3.this, End_target.class);
                 startActivity(i);
+
+
+
+
             }
 
         });
