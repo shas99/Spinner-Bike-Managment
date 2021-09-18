@@ -32,7 +32,7 @@ public class Rent3 extends AppCompatActivity {
 
                 Help helperHelp = new Help(UserDetails.ID(),"Test Success 5th attempt! :)");
 
-                reference.child("labadaba dub dub").setValue(helperHelp);
+                reference.child("Renting Bicycles").setValue(helperHelp);
 
 
                 Intent i = new Intent(Rent3.this, End_target.class);
