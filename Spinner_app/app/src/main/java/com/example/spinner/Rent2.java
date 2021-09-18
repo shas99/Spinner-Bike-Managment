@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Rent2 extends AppCompatActivity {
 private Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +20,7 @@ private Button button;
         String points = UserDetails.getPoints();
         TextView point = (TextView) findViewById(R.id.points55);
         point.setText(points);
+
 
 
 

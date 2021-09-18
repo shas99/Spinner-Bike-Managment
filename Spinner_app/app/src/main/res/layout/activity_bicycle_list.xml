@@ -11,10 +11,8 @@
         android:layout_width="208dp"
         android:layout_height="364dp"
         android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
         android:layout_marginTop="75dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
         android:layout_marginBottom="25dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -83,6 +81,7 @@
             android:textColor="@color/design_default_color_error"
             android:textSize="20sp"
             android:textStyle="bold" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -189,5 +188,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/_266184" />
+
+    <EditText
+        android:id="@+id/id_9999"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/button_05"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

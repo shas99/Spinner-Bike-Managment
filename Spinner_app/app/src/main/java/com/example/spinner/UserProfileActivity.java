@@ -97,8 +97,9 @@ private String userID;
                     String mobile =userProfile.mobileNo;
                     String points = userProfile.Points;
                     String ID = user.getUid();
+                    String Target = userProfile.Target;
                     //saving userDetails
-                    UserDetails U1 = new UserDetails(name,email,sex,mobile,points,ID);
+                    UserDetails U1 = new UserDetails(name,email,sex,mobile,points,ID,Target);
 
                     nameTextView.setText("Welcome " +name+ " !  ");
                     greetTextView.setText(email);
