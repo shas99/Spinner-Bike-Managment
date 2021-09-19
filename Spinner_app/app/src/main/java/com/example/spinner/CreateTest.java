@@ -7,16 +7,20 @@ public class CreateTest {
     String Review;
     String id5;
 
+
     public CreateTest(){
 
     }
 
-    public CreateTest(String brand, String name, String origin, String review, String ID) {
-        Brand = brand;
-        Name = name;
-        Origin = origin;
-        Review = review;
+
+
+    public CreateTest(String Brand, String Name, String Origin, String Review, String ID) {
+        this.Brand = Brand;
+        this.Name = Name;
+        this.Origin = Origin;
+        this.Review = Review;
         id5 = ID;
+
     }
 
     public String getBrand() {

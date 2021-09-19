@@ -46,65 +46,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CREATE" />
 
-    <Button
-        android:id="@+id/UPDATE"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginRight="150dp"
-        android:background="#07004A"
-        android:fontFamily="sans-serif-condensed-light"
-        android:text="@string/UPDATE"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:backgroundTint="@null"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Search_Retreive" />
-
-    <Button
-        android:id="@+id/DELETE"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginRight="150dp"
-        android:background="#07004A"
-        android:fontFamily="sans-serif-condensed-light"
-        android:text="@string/DELETE"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:backgroundTint="@null"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UPDATE" />
-
-    <Button
-        android:id="@+id/SELECT"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginRight="150dp"
-        android:layout_marginBottom="5dp"
-        android:background="#07004A"
-        android:fontFamily="sans-serif-condensed-light"
-        android:text="@string/UPGRADE"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toTopOf="@+id/imageView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DELETE" />
-
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="200dp"
@@ -122,15 +63,11 @@
         android:layout_width="200dp"
         android:layout_height="136dp"
         android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SELECT"
         app:srcCompat="@drawable/c" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

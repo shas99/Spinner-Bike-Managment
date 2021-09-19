@@ -1,29 +1,29 @@
 package com.example.spinner;
 
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Bicycle_List extends AppCompatActivity {
-FirebaseDatabase rootNode;
-DatabaseReference reference;
+
+import android.os.Bundle;
+
+public class VinodAdd extends AppCompatActivity {
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bicycle_list);
+        setContentView(R.layout.activity_vinod_add);
 
-        Button addBtn = (Button) findViewById(R.id.button_05);
-
-
-
+        Button addBtn = (Button) findViewById(R.id.button_05Vinod);
 
         addBtn.setOnClickListener(new View.OnClickListener() {
 
@@ -33,7 +33,7 @@ DatabaseReference reference;
             public void onClick(View view) {
 
 
-                EditText Brand = findViewById(R.id.id_1);
+                EditText Brand = findViewById(R.id.id_1Vinod);
 
 
                 String test1 = Brand.getText().toString();
@@ -41,14 +41,14 @@ DatabaseReference reference;
 
 
 
-                EditText Name = findViewById(R.id.ID_2);
+                EditText Name = findViewById(R.id.ID_2Vinod);
 
 
                 String test2 = Name.getText().toString();
 
 
 
-                EditText Origin = findViewById(R.id.id_3);
+                EditText Origin = findViewById(R.id.id_3Vinod);
 
 
                 String test3 = Origin.getText().toString();
@@ -56,7 +56,7 @@ DatabaseReference reference;
 
 
 
-                EditText Review = findViewById(R.id.id_4);
+                EditText Review = findViewById(R.id.id_4Vinod);
 
 
                 String test4 = Review.getText().toString();
@@ -64,7 +64,7 @@ DatabaseReference reference;
 
 
 
-                EditText id5 = findViewById(R.id.id_9999);
+                EditText id5 = findViewById(R.id.id_9999Vinod);
 
 
                 String test5 = id5.getText().toString();
@@ -76,7 +76,7 @@ DatabaseReference reference;
 
 
                 rootNode = FirebaseDatabase.getInstance();
-                reference = rootNode.getReference("Bicycle Management");
+                reference = rootNode.getReference("Event Management");
 
                 CreateTest obj = new CreateTest(test1,test2,test3,test4,test5);
 
@@ -91,14 +91,8 @@ DatabaseReference reference;
 
 
 
-                Intent intent = new Intent(Bicycle_List.this, BicycleMainMenuActivity.class);
 
-                startActivity(intent);
             }
         });
-
-
-
-
     }
 }
