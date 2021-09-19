@@ -14,6 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Donate extends AppCompatActivity {
 
     DatabaseReference reference;
+
     public String ID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class Donate extends AppCompatActivity {
         setContentView(R.layout.activity_donate);
 
         reference = FirebaseDatabase.getInstance().getReference("UsersProfile");
+
 
         String points = UserDetails.getPoints();
 
@@ -46,6 +48,7 @@ public class Donate extends AppCompatActivity {
         int temp = Integer.parseInt(updated);
         System.out.println("xxxTemp is " + temp);
         if(true){
+
             temp -= 100;
             System.out.println("xxxafter editing temp" + temp);
             updated = Integer.toString(temp);

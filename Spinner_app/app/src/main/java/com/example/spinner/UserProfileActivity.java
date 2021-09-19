@@ -21,18 +21,18 @@ import com.google.firebase.database.ValueEventListener;
 public class UserProfileActivity extends AppCompatActivity {
 
 private Button logout;
-private Button orderAbikebtn,updateBtn;
+private Button orderAbikebtn,updateBtn,deleteBtn;
 
 private FirebaseUser user;
 private DatabaseReference reference;
 private String userID;
 
-
+    DatabaseReference referenceTest;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userprofile);
-
+        referenceTest = FirebaseDatabase.getInstance().getReference("UsersProfile");
         logout = (Button) findViewById(R.id.LogoutBtn);
 
         logout.setOnClickListener(new View.OnClickListener() {
@@ -59,6 +59,16 @@ private String userID;
 
             }
         });
+        deleteBtn=(Button)findViewById(R.id.deletebtn555);
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                referenceTest.child(UserDetails.ID()).removeValue();
+
+            }
+        });
+
         updateBtn=(Button)findViewById(R.id.updatebtn);
         updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override

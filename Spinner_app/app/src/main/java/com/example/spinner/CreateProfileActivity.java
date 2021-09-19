@@ -71,6 +71,7 @@ photoButton.setOnClickListener(new View.OnClickListener() {
 
     }
 
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode,Intent data) {
 
@@ -138,6 +139,10 @@ photoButton.setOnClickListener(new View.OnClickListener() {
                                      if(task.isSuccessful()){
                                          Toast.makeText(CreateProfileActivity.this,"User is registered" ,Toast.LENGTH_LONG).show();
 
+                                         //Direct to Login
+                                         Intent intent = new Intent(CreateProfileActivity.this, MainActivity.class);
+                                         startActivity(intent);
+
                                      }else{
                                          Toast.makeText(CreateProfileActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                      }
@@ -152,7 +157,6 @@ photoButton.setOnClickListener(new View.OnClickListener() {
                     }
 
                 });
-
 
 
     }

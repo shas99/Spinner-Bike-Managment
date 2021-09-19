@@ -41,7 +41,8 @@ public class Target extends AppCompatActivity {
             EditText txtname = findViewById(R.id.emailInput);
             String name = txtname.getText().toString();
 
-            System.out.println("Hello " + name);
+
+
 
             reference.child(UserDetails.ID()).child("Target").setValue(name);
             return true;
