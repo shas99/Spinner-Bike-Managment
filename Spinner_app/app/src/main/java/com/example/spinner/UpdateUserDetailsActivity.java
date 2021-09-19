@@ -23,7 +23,7 @@ public class UpdateUserDetailsActivity extends AppCompatActivity {
     DatabaseReference reference;
     public String ID;
 
-    EditText emailEdit, nameEdit, phoneEdit, gmail;
+    EditText  nameEdit, phoneEdit, gmail;
 
     FirebaseDatabase db = FirebaseDatabase.getInstance();
 
