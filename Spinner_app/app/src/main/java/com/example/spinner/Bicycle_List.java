@@ -63,6 +63,19 @@ DatabaseReference reference;
 
 
 
+
+                EditText Image = findViewById(R.id.id_chamzz);
+
+
+                String test6 = Image.getText().toString();
+
+
+
+
+
+
+
+
                 EditText id5 = findViewById(R.id.id_9999);
 
 
@@ -72,10 +85,12 @@ DatabaseReference reference;
 
 
 
+
+
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("Bicycle Management");
 
-                CreateTest obj = new CreateTest(test1,test2,test3,test4,test5);
+                CreateTest obj = new CreateTest(test1,test2,test3,test4,test5,test6);
 
                 reference.child(test5).setValue(obj);
 
