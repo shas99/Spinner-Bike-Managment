@@ -1,5 +1,6 @@
 package com.example.spinner;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -31,6 +32,8 @@ public class Target extends AppCompatActivity {
     public void update55(View view){
         if(isChaged()){
             Toast.makeText(this, "Data has been updated", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(Target.this,UserProfileActivity.class);
+            startActivity(i);
         }
     }
 
