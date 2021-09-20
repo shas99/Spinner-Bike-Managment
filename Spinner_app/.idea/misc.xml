@@ -18,6 +18,11 @@
         <entry key="..\:/Users/Shasvathan/AndroidStudioProjects/Spinner_app/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Shasvathan/AndroidStudioProjects/Spinner_app/app/src/main/res/layout/activity_third.xml" value="0.1" />
         <entry key="..\:/Users/Shasvathan/AndroidStudioProjects/Spinner_app/app/src/main/res/layout/activity_userProfile.xml" value="0.1" />
+        <entry key="..\:/Users/Shasvathan/Desktop/dingdong/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_createprofile.xml" value="0.1" />
+        <entry key="..\:/Users/Shasvathan/Desktop/dingdong/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_end_target.xml" value="0.1" />
+        <entry key="..\:/Users/Shasvathan/Desktop/dingdong/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_rent2.xml" value="0.12" />
+        <entry key="..\:/Users/Shasvathan/Desktop/dingdong/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_target.xml" value="0.1" />
+        <entry key="..\:/Users/Shasvathan/Desktop/dingdong/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_weekly_target.xml" value="0.22" />
         <entry key="..\:/Users/Shasvathan/Desktop/spinnerOG/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_confirm.xml" value="0.18" />
         <entry key="..\:/Users/Shasvathan/Desktop/spinnerOG/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_create.xml" value="0.25" />
         <entry key="..\:/Users/Shasvathan/Desktop/spinnerOG/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_donate.xml" value="0.25" />
@@ -31,13 +36,6 @@
         <entry key="..\:/Users/Shasvathan/Desktop/spinnerOG/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_userprofile.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Shasvathan/Desktop/spinnerOG/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_weekly_target.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Shasvathan/Desktop/spinnerOG/Spiner-Bike-Managment/Spinner_app/app/src/main/res/menu/example_menu.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/pasin/Desktop/MAD RSUD/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_bicycle_list.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/pasin/Desktop/MAD RSUD/abc/Spiner-Bike-Managment/Spinner_app/app/src/main/res/drawable/_1536872261558965374.xml" value="0.22179487179487178" />
-        <entry key="..\:/Users/pasin/Desktop/MAD RSUD/abc/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_add_abicycle.xml" value="0.20854700854700856" />
-        <entry key="..\:/Users/pasin/Desktop/MAD RSUD/abc/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_bicycle_list.xml" value="0.20854700854700856" />
-        <entry key="..\:/Users/pasin/Desktop/MAD RSUD/abc/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_bicyclemainmenu.xml" value="0.20854700854700856" />
-        <entry key="..\:/Users/pasin/Desktop/MAD RSUD/abc/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_bike_info.xml" value="0.20854700854700856" />
-        <entry key="..\:/Users/pasin/Desktop/MAD RSUD/abc/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_chamath_retreive.xml" value="0.20854700854700856" />
         <entry key="..\:/Users/pasin/Desktop/Spiner-Bike-Managment/Spinner_app/app/src/main/res/drawable/_1536872261558965374.xml" value="0.196875" />
         <entry key="..\:/Users/pasin/Desktop/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_add_abicycle.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/pasin/Desktop/Spiner-Bike-Managment/Spinner_app/app/src/main/res/layout/activity_bicycle_list.xml" value="0.25416666666666665" />
@@ -60,12 +58,8 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.41458333333333336" />
         <entry key="app/src/main/res/layout/activity_orderbike.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_searchbikeorder.xml" value="0.28541666666666665" />
-        <entry key="app/src/main/res/layout/activity_show.xml" value="0.22239583333333332" />
         <entry key="app/src/main/res/layout/activity_update_user_details.xml" value="0.2635416666666667" />
-        <entry key="app/src/main/res/layout/activity_user_feedback.xml" value="0.37395833333333334" />
-        <entry key="app/src/main/res/layout/activity_user_requests.xml" value="0.38958333333333334" />
         <entry key="app/src/main/res/layout/activity_userprofile.xml" value="0.3359375" />
-        <entry key="app/src/main/res/layout/item.xml" value="0.22239583333333332" />
       </map>
     </option>
   </component>
