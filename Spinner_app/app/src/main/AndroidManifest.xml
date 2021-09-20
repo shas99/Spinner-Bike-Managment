@@ -17,6 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SpinnerBikeCustomerService">
         <activity
+            android:name=".ShowActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UserFeedback"
+            android:exported="true" />
+        <activity
             android:name=".Confirm"
             android:exported="true" />
         <activity
@@ -35,7 +41,7 @@
         <activity android:name=".LiveChatActivity" />
         <activity android:name=".CreateProfileActivity" />
         <activity android:name=".UserProfileActivity" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,9 +53,7 @@
             android:exported="true" />
         <activity
             android:name=".Rent2"
-            android:exported="true"/>
-
-
+            android:exported="true" />
         <activity
             android:name=".Rent3"
             android:exported="true" />
