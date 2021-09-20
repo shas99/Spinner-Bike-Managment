@@ -17,10 +17,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SpinnerBikeCustomerService">
         <activity
+            android:name=".Event_List"
+            android:exported="true" />
+        <activity
             android:name=".VinodMenu"
             android:exported="true" />
         <activity
             android:name=".VinodAdd"
+            android:exported="true" />
+        <activity
+            android:name=".VinodRetreive"
             android:exported="true" />
         <activity
             android:name=".Confirm"
