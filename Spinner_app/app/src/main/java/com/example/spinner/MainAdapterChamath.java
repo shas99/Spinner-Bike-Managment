@@ -82,7 +82,7 @@ public class MainAdapterChamath extends FirebaseRecyclerAdapter <BikeRetreiveMai
                     @Override
                     public void onClick(View view) {
                         Map<String,Object> map = new HashMap<>();
-                        map.put("review",Review.getText().toString());
+                        map.put("Review",Review.getText().toString());
 
                         FirebaseDatabase.getInstance().getReference().child("Bicycle Management")
                                 .child(Objects.requireNonNull(getRef(position).getKey())).updateChildren(map)
