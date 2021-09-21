@@ -120,6 +120,18 @@
         <activity
             android:name=".EventAdminMain"
             android:exported="true" />
+        <activity
+            android:name=".Event_List"
+            android:exported="true" />
+        <activity
+            android:name=".VinodMenu"
+            android:exported="true" />
+        <activity
+            android:name=".VinodAdd"
+            android:exported="true" />
+        <activity
+            android:name=".VinodRetreive"
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"

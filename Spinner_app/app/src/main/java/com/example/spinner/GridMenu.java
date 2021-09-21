@@ -66,7 +66,7 @@ public class GridMenu extends AppCompatActivity {
         startActivity(intent);
     }
     public void openNewActivity3(){
-        Intent intent = new Intent(this, EventsMainActivity.class);
+        Intent intent = new Intent(this, VinodMenu.class);
         startActivity(intent);
     }
 }

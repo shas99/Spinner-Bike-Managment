@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cham1vinod"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/nametextvinod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/cham1vinod"
+            android:text="Event"
+            android:textColor="#000"
+            android:textSize="22sp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/nametext2vinod"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nametextvinod"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/cham1vinod"
+            android:text="Start"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+
+            />
+<!--New-->
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/nametext2vinod11"
+            android:text="-"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_toRightOf="@+id/nametext2vinod"
+            android:layout_below="@+id/nametextvinod"
+            android:layout_marginLeft="10dp"
+
+            />
+
+        <TextView
+            android:id="@+id/nametext2vinod1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nametextvinod"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/nametext2vinod11"
+            android:text="End"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+
+            />
+<!--New-->
+
+        <TextView
+            android:id="@+id/nametext3vinod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nametext2vinod"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/cham1vinod"
+            android:text="More Info"
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:textStyle="bold"
+
+            />
+
+<!--New-->
+
+        <TextView
+            android:id="@+id/nametext3vinod145"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nametext3vinod"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/cham1vinod"
+            android:text="Rating"
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:textStyle="bold"
+
+            />
+
+<!--New-->
+
+
+        <LinearLayout
+            android:layout_below="@+id/nametext3vinod145"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="Rate Event"
+                android:textAllCaps="false"
+                android:layout_marginRight="5dp"
+                android:id="@+id/btnEditvinod"/>
+
+            <Button
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:textAllCaps="false"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/btnDeletevinod"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
