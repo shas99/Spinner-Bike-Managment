@@ -71,6 +71,10 @@ public class VinodAdd extends AppCompatActivity {
 
 
 
+                EditText link = findViewById(R.id.id_4Vinod122);
+
+
+                String test6 = link.getText().toString();
 
 
 
@@ -78,7 +82,7 @@ public class VinodAdd extends AppCompatActivity {
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("Event Management");
 
-                CreateTest obj = new CreateTest(test1,test2,test3,test4,test5);
+                Event_Model obj = new Event_Model(test1,test2,test3,test4,test6);
 
                 reference.child(test5).setValue(obj);
 

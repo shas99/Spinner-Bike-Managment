@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-condensed-light"
-            android:text="Enter Bicycle Brand"
+            android:text="Enter Event Name"
             android:textColor="@color/blue_100"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -44,7 +44,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
             android:fontFamily="sans-serif-condensed-light"
-            android:text="Enter Bicycle Name"
+            android:text="Enter Starting Date"
             android:textColor="@color/blue_100"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-condensed-light"
-            android:text="Enter Bicycle Origin"
+            android:text="Enter Ending Date"
             android:textColor="@color/blue_100"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -66,12 +66,25 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-condensed-light"
-            android:text="Enter Bicycle Review"
+            android:text="Enter Web Link"
             android:textColor="@color/blue_100"
             android:textSize="20sp"
             android:textStyle="bold" />
 
+<!-- New -->
 
+        <TextView
+            android:id="@+id/textView6Vinod123"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Enter Banner Link"
+            android:textColor="@color/blue_100"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+<!-- New -->
 
 
 
@@ -92,6 +105,7 @@
         app:layout_constraintStart_toEndOf="@+id/VinodlinearLayout"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <EditText
             android:id="@+id/id_1Vinod"
             android:layout_width="match_parent"
@@ -104,13 +118,16 @@
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck" />
 
+<!-- Edited input type-->
+
         <EditText
             android:id="@+id/ID_2Vinod"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="sans-serif-condensed-light"
-            android:inputType="textPersonName"
+            android:inputType="date"
+            android:hint="dd/mm/yyyy"
             android:minHeight="48dp"
             android:text=""
             android:textSize="20sp"
@@ -123,7 +140,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="sans-serif-condensed-light"
-            android:inputType="textPersonName"
+            android:inputType="date"
+            android:hint="dd/mm/yyyy"
             android:text=""
             android:textSize="20sp"
             android:textStyle="bold"
@@ -135,14 +153,30 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="sans-serif-condensed-light"
-            android:inputType="textPersonName"
+            android:inputType="textWebEmailAddress"
             android:text=""
             android:textSize="20sp"
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck" />
 
+<!--Edited input type-->
 
 
+<!--  New  -->
+
+        <EditText
+            android:id="@+id/id_4Vinod122"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed-light"
+            android:inputType="textWebEmailAddress"
+            android:text=""
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+<!--  New  -->
 
     </LinearLayout>
 
@@ -151,14 +185,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
         android:layout_marginTop="55dp"
         android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
         android:layout_marginBottom="50dp"
-        android:background="#000B32"
+        android:background="#0022FF"
         android:backgroundTint="@null"
         android:fontFamily="sans-serif-condensed-light"
+        android:rotationX="-4"
         android:text="@string/butt_01"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -181,7 +214,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/_266184" />
+        app:srcCompat="@drawable/createevents"
+        android:outlineAmbientShadowColor="#002afa"
+        />
 
     <EditText
         android:id="@+id/id_9999Vinod"

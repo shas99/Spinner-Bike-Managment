@@ -33,7 +33,7 @@ public class Event_List extends AppCompatActivity {
 
         FirebaseRecyclerOptions<BikeRetreiveMainModel> options =
                 new FirebaseRecyclerOptions.Builder<BikeRetreiveMainModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Bicycle Management"), BikeRetreiveMainModel.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Event Management"), BikeRetreiveMainModel.class)
                         .build();
 
         mainAdapterVinod = new MainAdapterVinod(options);
