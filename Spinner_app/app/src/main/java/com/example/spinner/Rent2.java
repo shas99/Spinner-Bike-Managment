@@ -18,9 +18,9 @@ public class Rent2 extends AppCompatActivity {
     private Button button;
     RadioGroup radioGroup;
     RadioButton radioButton;
-
+    public int clicked = 0;
     public Boolean is = false;
-    public String radio;
+    public String radio = "radioButton";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,8 +56,14 @@ public class Rent2 extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
                 System.out.println("Bruhhh " + is + " " + radio);
-                BikeType L = new BikeType(is,radio);
+                if(clicked == 0) {
+                    BikeType L = new BikeType(is, "Small");
+                }
+                else if(clicked == 1){
+                    BikeType L = new BikeType(is, radio);
+                }
 
                 int radioId = radioGroup.getCheckedRadioButtonId();
                 radioButton = findViewById(radioId);
@@ -82,8 +88,9 @@ public class Rent2 extends AppCompatActivity {
     public void checkButton1(View v){
         int radioId = radioGroup.getCheckedRadioButtonId();
         radioButton = findViewById(radioId);
-
+        System.out.println("aaa***" + radioButton + "***");
         Toast.makeText(this, "Selected Radio Button: " + radioButton.getText(), Toast.LENGTH_SHORT).show();
+        clicked = 1;
         radio = radioButton.getText().toString();
     }
 
