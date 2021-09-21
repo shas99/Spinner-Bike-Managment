@@ -32,7 +32,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class MainAdapterVinod extends FirebaseRecyclerAdapter<BikeRetreiveMainModel,MainAdapterVinod.myViewHolders> {
+public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAdapterVinod.myViewHolders> {
 
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
@@ -40,24 +40,23 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<BikeRetreiveMainMo
      *
      * @param options
      */
-    public MainAdapterVinod(@NonNull FirebaseRecyclerOptions<BikeRetreiveMainModel> options) {
+    public MainAdapterVinod(@NonNull FirebaseRecyclerOptions<Event_Model> options) {
         super(options);
     }
 
     @SuppressLint("RecyclerView")
     @Override
-    protected void onBindViewHolder(@NonNull MainAdapterVinod.myViewHolders holder, int position, @NonNull BikeRetreiveMainModel model) {
-        holder.Brand.setText(model.getBrand());
-        holder.Name.setText(model.getName());
-        holder.Origin.setText(model.getOrigin());
+    protected void onBindViewHolder(@NonNull MainAdapterVinod.myViewHolders holder, int position, @NonNull Event_Model model) {
+        holder.Name.setText(model.getname());
+        holder.Start.setText(model.getStart());
+        holder.End.setText(model.getEnd());
 
         Glide.with(holder.img.getContext())
-                .load(model.getImage())
+                .load(model.getBanner())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
                 .circleCrop()
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);
-
 
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +74,7 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<BikeRetreiveMainMo
                 Button btnUpdate = view.findViewById(R.id.btnUpdates);
 
 
-                Review.setText(model.getReview());
+                Review.setText(model.getname());
 
                 dialogPlus.show();
 
@@ -83,7 +82,7 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<BikeRetreiveMainMo
                     @Override
                     public void onClick(View view) {
                         Map<String,Object> map = new HashMap<>();
-                        map.put("Review",Review.getText().toString());
+                        map.put("name",Review.getText().toString());
 
                         FirebaseDatabase.getInstance().getReference().child("Event Management")
                                 .child(Objects.requireNonNull(getRef(position).getKey())).updateChildren(map)
@@ -112,10 +111,11 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<BikeRetreiveMainMo
             }
         });
 
+
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(holder.Brand.getContext());
+                AlertDialog.Builder builder = new AlertDialog.Builder(holder.Name.getContext());
                 builder.setTitle("Do you wish to proceed with deletion?");
                 builder.setMessage("Deletions cannot be reversed!");
 
@@ -130,14 +130,18 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<BikeRetreiveMainMo
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(holder.Brand.getContext(),"Cancelled!",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(holder.Name.getContext(),"Cancelled!",Toast.LENGTH_SHORT).show();
                     }
                 });
 
                 builder.show();
             }
         });
+
+
     }
+
+
 
     @NonNull
     @Override
@@ -150,16 +154,16 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<BikeRetreiveMainMo
     class myViewHolders extends RecyclerView.ViewHolder{
 
         CircleImageView img;
-        TextView Brand,Name,Origin;
+        TextView Name,Start,End;
 
         Button btnEdit,btnDelete;
 
         public myViewHolders(@NonNull View itemView) {
             super(itemView);
             img = (CircleImageView)itemView.findViewById(R.id.cham1vinod);
-            Brand = (TextView)itemView.findViewById(R.id.nametextvinod);
+            End = (TextView)itemView.findViewById(R.id.nametextvinod);
             Name = (TextView) itemView.findViewById(R.id.nametext2vinod);
-            Origin = (TextView) itemView.findViewById(R.id.nametext3vinod);
+            Start = (TextView) itemView.findViewById(R.id.nametext3vinod);
 
             btnEdit = (Button) itemView.findViewById(R.id.btnEditvinod);
             btnDelete = (Button) itemView.findViewById(R.id.btnDeletevinod);

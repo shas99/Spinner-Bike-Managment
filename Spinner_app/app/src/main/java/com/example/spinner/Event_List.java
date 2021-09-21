@@ -31,9 +31,9 @@ public class Event_List extends AppCompatActivity {
         recyclerView = (RecyclerView)findViewById(R.id.bevents);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<BikeRetreiveMainModel> options =
-                new FirebaseRecyclerOptions.Builder<BikeRetreiveMainModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Event Management"), BikeRetreiveMainModel.class)
+        FirebaseRecyclerOptions<Event_Model> options =
+                new FirebaseRecyclerOptions.Builder<Event_Model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Event Management"), Event_Model.class)
                         .build();
 
         mainAdapterVinod = new MainAdapterVinod(options);
