@@ -29,8 +29,9 @@
             android:layout_toRightOf="@+id/cham1vinod"
             android:text="Event"
             android:textColor="#000"
-            android:textSize="22sp"
+            android:textSize="25sp"
             android:textStyle="bold"
+
 
             />
 
@@ -43,22 +44,23 @@
             android:layout_toRightOf="@+id/cham1vinod"
             android:text="Start"
             android:textColor="#000"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold"
 
             />
 <!--New-->
         <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
             android:id="@+id/nametext2vinod11"
-            android:text="-"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#000"
-            android:layout_toRightOf="@+id/nametext2vinod"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/nametextvinod"
             android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/nametext2vinod"
+            android:textAlignment="center"
+            android:text="-"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold"
 
             />
 
@@ -71,7 +73,7 @@
             android:layout_toRightOf="@+id/nametext2vinod11"
             android:text="End"
             android:textColor="#000"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold"
 
             />
@@ -86,8 +88,7 @@
             android:layout_toRightOf="@+id/cham1vinod"
             android:text="More Info"
             android:textColor="#000"
-            android:textSize="18dp"
-            android:textStyle="bold"
+            android:textSize="14sp"
 
             />
 
@@ -100,9 +101,9 @@
             android:layout_below="@+id/nametext3vinod"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/cham1vinod"
-            android:text="Rating"
+            android:text="Status"
             android:textColor="#000"
-            android:textSize="18dp"
+            android:textSize="16dp"
             android:textStyle="bold"
 
             />

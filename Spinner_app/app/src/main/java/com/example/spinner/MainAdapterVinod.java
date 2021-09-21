@@ -3,6 +3,7 @@ package com.example.spinner;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,6 +51,7 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
         holder.Name.setText(model.getname());
         holder.Start.setText(model.getStart());
         holder.End.setText(model.getEnd());
+        holder.Web.setText(model.getWeb());
 
         Glide.with(holder.img.getContext())
                 .load(model.getBanner())
@@ -154,16 +156,17 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
     class myViewHolders extends RecyclerView.ViewHolder{
 
         CircleImageView img;
-        TextView Name,Start,End;
+        TextView Name,Start,End,Web;
 
         Button btnEdit,btnDelete;
 
         public myViewHolders(@NonNull View itemView) {
             super(itemView);
             img = (CircleImageView)itemView.findViewById(R.id.cham1vinod);
-            End = (TextView)itemView.findViewById(R.id.nametextvinod);
-            Name = (TextView) itemView.findViewById(R.id.nametext2vinod);
-            Start = (TextView) itemView.findViewById(R.id.nametext3vinod);
+            Name = (TextView)itemView.findViewById(R.id.nametextvinod);
+            Start = (TextView) itemView.findViewById(R.id.nametext2vinod);
+            End = (TextView) itemView.findViewById(R.id.nametext2vinod1);
+            Web = (TextView) itemView.findViewById(R.id.nametext3vinod);
 
             btnEdit = (Button) itemView.findViewById(R.id.btnEditvinod);
             btnDelete = (Button) itemView.findViewById(R.id.btnDeletevinod);

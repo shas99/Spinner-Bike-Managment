@@ -28,7 +28,7 @@
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-condensed-light"
             android:text="Enter Event Name"
-            android:textColor="@color/blue_100"
+            android:textColor="@color/browser_actions_title_color"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -45,7 +45,7 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="sans-serif-condensed-light"
             android:text="Enter Starting Date"
-            android:textColor="@color/blue_100"
+            android:textColor="@color/browser_actions_title_color"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -56,7 +56,7 @@
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-condensed-light"
             android:text="Enter Ending Date"
-            android:textColor="@color/blue_100"
+            android:textColor="@color/browser_actions_title_color"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -67,7 +67,7 @@
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-condensed-light"
             android:text="Enter Web Link"
-            android:textColor="@color/blue_100"
+            android:textColor="@color/browser_actions_title_color"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -80,7 +80,7 @@
             android:layout_margin="10dp"
             android:fontFamily="sans-serif-condensed-light"
             android:text="Enter Banner Link"
-            android:textColor="@color/blue_100"
+            android:textColor="@color/browser_actions_title_color"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -202,8 +202,8 @@
 
     <ImageView
         android:id="@+id/imageViewVinod"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
         android:layout_marginStart="25dp"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
@@ -214,8 +214,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/createevents"
+        app:srcCompat="@drawable/ic_baseline_event_24"
         android:outlineAmbientShadowColor="#002afa"
+
         />
 
     <EditText

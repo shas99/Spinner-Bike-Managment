@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
 
 import android.os.Bundle;
@@ -22,11 +23,20 @@ public class Event_List extends AppCompatActivity {
 
     RecyclerView recyclerView;
     MainAdapterVinod mainAdapterVinod;
+    FloatingActionButton floatingActionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_list);
+
+        floatingActionButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNewActivity();
+            }
+        });
 
         recyclerView = (RecyclerView)findViewById(R.id.bevents);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -40,6 +50,12 @@ public class Event_List extends AppCompatActivity {
         recyclerView.setAdapter(mainAdapterVinod);
 
     }
+
+        public void openNewActivity(){
+        Intent intent = new Intent(this, VinodAdd.class);
+        startActivity(intent);
+        }
+
 
     @Override
     protected void onStart() {
