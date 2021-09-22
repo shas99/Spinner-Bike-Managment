@@ -1,6 +1,11 @@
 package com.example.spinner;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -8,6 +13,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -30,7 +37,7 @@ public class Weekly_target extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weekly_target);
-
+        CreateNotificatoinChannel();
         reference = FirebaseDatabase.getInstance().getReference("UsersProfile");
 
 
@@ -115,6 +122,8 @@ public class Weekly_target extends AppCompatActivity {
                             rem = (timeInmillis - sec * 1000) / 1000;
                             dum = String.valueOf(rem);
                             reference.child(UserDetails.ID()).child("Target").setValue(dum);
+
+
                         }else if(isStart == false){
                             cancel();
                         }
@@ -125,6 +134,17 @@ public class Weekly_target extends AppCompatActivity {
 
 
                     public void onFinish() {
+
+
+                        NotificationCompat.Builder builder = new NotificationCompat.Builder(Weekly_target.this,"lemubitA")
+                                .setSmallIcon(R.drawable.ic_message)
+                                .setContentTitle("Spinner Target Completed")
+                                .setContentText("You have successfully completed your target :)")
+                                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+                        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(Weekly_target.this);
+
+                        notificationManager.notify(100,builder.build());
                         bro.setText("Done!");
                     }
 
@@ -134,6 +154,19 @@ public class Weekly_target extends AppCompatActivity {
         });
     }
 
+private void CreateNotificatoinChannel(){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){//try changing to zero if it didn't work
+            CharSequence name = "stuentChannel";
+            String description = "Channel for student notification";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("lemubitA",name,importance);
+            channel.setDescription(description);
 
+
+
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+}
 
 }

@@ -6,18 +6,26 @@ public class CreateTest {
     String Origin;
     String Review;
     String id5;
+    String Image;
+
 
     public CreateTest(){
 
     }
 
-    public CreateTest(String brand, String name, String origin, String review, String ID) {
-        Brand = brand;
-        Name = name;
-        Origin = origin;
-        Review = review;
+
+
+    public CreateTest(String Brand, String Name, String Origin, String Review, String ID,String Image) {
+        this.Brand = Brand;
+        this.Name = Name;
+        this.Origin = Origin;
+        this.Review = Review;
+        this.Image = Image;
         id5 = ID;
+
     }
+
+
 
     public String getBrand() {
         return Brand;
@@ -55,7 +63,13 @@ public class CreateTest {
         return id5;
     }
 
-    public void setId5(String id5) {
-        this.id5 = id5;
+    public void setId5(String id5) { this.id5 = id5; }
+
+    public String getImage() {
+        return Image;
+    }
+
+    public void setImage(String image) {
+        Image = image;
     }
 }
