@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import java.util.*;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 public class UserProfileActivity extends AppCompatActivity {
 
 private Button logout;
-private Button orderAbikebtn,updateBtn,deleteBtn;
+private Button orderAbikebtn,updateBtn,deleteBtn,myTaskBtn;
 
 private FirebaseUser user;
 private DatabaseReference reference;
@@ -52,6 +52,18 @@ private String userID;
         orderAbikebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(UserProfileActivity.this, OrderBikeActivity.class);
+                startActivity(intent);
+
+
+
+            }
+        });
+        //MyTask
+        myTaskBtn =(Button)findViewById(R.id.myTasks);
+        myTaskBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intent = new Intent(UserProfileActivity.this, UserFeedback.class);
                 startActivity(intent);
 
@@ -59,12 +71,20 @@ private String userID;
 
             }
         });
+
         deleteBtn=(Button)findViewById(R.id.deletebtn555);
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 referenceTest.child(UserDetails.ID()).removeValue();
+
+                Toast.makeText(UserProfileActivity.this, "Hope To See You Again , Bye !", Toast.LENGTH_LONG).show();
+
+
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(UserProfileActivity.this,MainActivity.class));
+
 
             }
         });
@@ -111,7 +131,7 @@ private String userID;
                     //saving userDetails
                     UserDetails U1 = new UserDetails(name,email,sex,mobile,points,ID,Target);
 
-                    nameTextView.setText("Welcome " +name+ " !  ");
+                    nameTextView.setText("   Welcome " +name+ "  !  ");
                     greetTextView.setText(email);
                     gender.setText(sex);
                     mobileNumber.setText(mobile);

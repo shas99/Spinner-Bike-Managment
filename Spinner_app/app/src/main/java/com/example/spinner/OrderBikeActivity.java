@@ -3,23 +3,15 @@ package com.example.spinner;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 
 public class OrderBikeActivity extends AppCompatActivity {
@@ -29,6 +21,7 @@ public class OrderBikeActivity extends AppCompatActivity {
     private FirebaseDatabase database;
     private Button orderBikeBtn;
     BikeOrder order1;
+    private TextView collections,promoCalculate;
 
     private DatabaseReference myRef;
 
@@ -43,13 +36,13 @@ public class OrderBikeActivity extends AppCompatActivity {
 
 
 
-
-
+        promoCalculate=(TextView)findViewById(R.id.promoCalc);
+        collections=(TextView)findViewById(R.id.collections);
             cyclerID =(EditText)findViewById(R.id.cyclerIDInput);
             mobileNo =(EditText) findViewById(R.id.editTextPhone);
             bicycleType= (EditText) findViewById(R.id.bikesDropDown);
             NIC =(EditText)findViewById(R.id.nicInput);
-            orderBikeBtn=(Button)findViewById(R.id.orderABikeBtn);
+            orderBikeBtn=(Button)findViewById(R.id.myTasks);
             order1 =new BikeOrder();
             myRef=FirebaseDatabase.getInstance().getReference().child("Bike Order Details");
 
@@ -68,7 +61,10 @@ public class OrderBikeActivity extends AppCompatActivity {
                     order1.setBicycleType(bicycleRef);
 
                     myRef.push().setValue(order1);
-                    Toast.makeText(OrderBikeActivity.this, "Successfully Data inserted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OrderBikeActivity.this, "Successfully Ordered", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(OrderBikeActivity.this, UserProfileActivity.class);
+                    startActivity(intent);
 
 
 
@@ -77,20 +73,46 @@ public class OrderBikeActivity extends AppCompatActivity {
 
                 }
             });
+        collections.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(OrderBikeActivity.this, Add_A_Bicycle.class);
+                startActivity(intent);
 
 
 
 
 
 
-        insertOrderData();
+            }
+        });
+
+        promoCalculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(OrderBikeActivity.this,CalculatePrice.class);
+                startActivity(intent);
+
+
+
+
+
+
+            }
+        });
+
+
+
+
+
+
         
 
         
     }
 
-    private void insertOrderData() {
-    }
 
 
 }
