@@ -29,6 +29,11 @@
     <string name="creditCard">Credit Card</string>
     <string name="LoginMainGreeting">Spinner</string>
 
+    <string name="action_settings">Settings</string>
+    <string name="full_price">Full Price</string>
+    <string name="discount_amount">Discount</string>
+    <string name="price_with_discount">Price with Discount</string>
+
 
     <string name="Welcome">Welcome</string>
     <string name="btnRent">RENT</string>
@@ -165,6 +170,7 @@
     <string name="DataDate">20/11/2021</string>
     <string name="DataEdate">22/11/2021</string>
     <string name="dataDes">Comming soon!</string>
+    <string name="Calculatebtn">Calculate Cost</string>
 
     <string-array name="bikes">
         <item>BMX Drift -  Price 12K</item>
@@ -173,4 +179,11 @@
         <item>Lion Rage - Price 32K</item>
         <item>BigSur Blue - Price 56K</item>
     </string-array>
+
+    <string-array name="status">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
 </resources>

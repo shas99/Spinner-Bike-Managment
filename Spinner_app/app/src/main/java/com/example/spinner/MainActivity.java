@@ -94,7 +94,7 @@ loginBtn=(Button) findViewById(R.id.btnLogin);
 
                             FirebaseUser user =FirebaseAuth.getInstance().getCurrentUser();
                             if(user.isEmailVerified()){
-                                startActivity(new Intent(MainActivity.this,GridMenu.class));
+                                startActivity(new Intent(MainActivity.this,Dashboard.class));
                             }else{
                                 user.sendEmailVerification();
                                 Toast.makeText(MainActivity.this, "Check your email to confirm account", Toast.LENGTH_SHORT).show();

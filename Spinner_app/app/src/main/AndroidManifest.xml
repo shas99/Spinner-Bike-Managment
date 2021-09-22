@@ -17,6 +17,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SpinnerBikeCustomerService">
         <activity
+            android:name=".Dashboard"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CalculatePrice"
+            android:exported="true" />
+        <activity
             android:name=".ShowActivity"
             android:exported="true" />
         <activity
@@ -41,7 +50,7 @@
         <activity android:name=".LiveChatActivity" />
         <activity android:name=".CreateProfileActivity" />
         <activity android:name=".UserProfileActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -119,6 +128,18 @@
             android:exported="true" />
         <activity
             android:name=".EventAdminMain"
+            android:exported="true" />
+        <activity
+            android:name=".Event_List"
+            android:exported="true" />
+        <activity
+            android:name=".VinodMenu"
+            android:exported="true" />
+        <activity
+            android:name=".VinodAdd"
+            android:exported="true" />
+        <activity
+            android:name=".VinodRetreive"
             android:exported="true" />
 
         <meta-data
