@@ -17,6 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SpinnerBikeCustomerService">
         <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CalculatePrice"
+            android:exported="true" />
+        <activity
             android:name=".ShowActivity"
             android:exported="true" />
         <activity
@@ -41,7 +47,7 @@
         <activity android:name=".LiveChatActivity" />
         <activity android:name=".CreateProfileActivity" />
         <activity android:name=".UserProfileActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

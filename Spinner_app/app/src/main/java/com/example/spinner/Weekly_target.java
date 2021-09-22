@@ -6,11 +6,13 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
@@ -49,7 +51,8 @@ public class Weekly_target extends AppCompatActivity {
     DatabaseReference reference;
     DatabaseReference referenceret;
 
-
+    int timeleft;
+    float totaltime = (float) Integer.parseInt(UserDetails.getTarget());
     private FirebaseUser user;
 
     private String userID;
@@ -60,6 +63,9 @@ public class Weekly_target extends AppCompatActivity {
     public static int reload = 1;
 
 
+
+    ProgressBar pb;
+    int counter = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -177,6 +183,7 @@ public class Weekly_target extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
                 //timer
                 if(isStart == false){
                     isStart = true;
@@ -220,11 +227,15 @@ public class Weekly_target extends AppCompatActivity {
                         if(isStart == true) {
 
                             bro.setText("Seconds Remaining:" + millisUntilFinished / 1000);
+                            timeleft = (int)millisUntilFinished*100;
                             sec++;
                             rem = (Integer.parseInt(UserDetails.getTarget())*1000 - sec * 1000) / 1000;
                             dum = String.valueOf(rem);
                             reference.child(UserDetails.ID()).child("Target").setValue(String.valueOf(millisUntilFinished / 1000));
-
+                            //counter++;
+                            counter =(int) ( timeleft / (totaltime*1000));
+                            System.out.println("Counter is:" + counter);
+                            prog();
 
                         }else if(isStart == false){
                             cancel();
@@ -250,6 +261,9 @@ public class Weekly_target extends AppCompatActivity {
                         //notification end
 
                         bro.setText("Done!");
+
+                        pb.setProgress(100);
+                        button666.setText("END");
                     }
 
                 }.start();
@@ -280,6 +294,13 @@ private void CreateNotificatoinChannel(){
     @Override
     public void onResume(){
         super.onResume();
+
+
+    }
+    public void prog(){
+        pb = (ProgressBar) findViewById(R.id.progressBar);
+
+        pb.setProgress(100-counter);
 
 
     }
