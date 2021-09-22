@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +19,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class Event_List extends AppCompatActivity {
 
@@ -68,5 +70,6 @@ public class Event_List extends AppCompatActivity {
         super.onStop();
         mainAdapterVinod.stopListening();
     }
+
 
 }

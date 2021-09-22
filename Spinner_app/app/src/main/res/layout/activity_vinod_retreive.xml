@@ -120,7 +120,7 @@
             <Button
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
-                android:text="Rate Event"
+                android:text="Update Status"
                 android:textAllCaps="false"
                 android:layout_marginRight="5dp"
                 android:id="@+id/btnEditvinod"/>

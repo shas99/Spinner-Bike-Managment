@@ -52,6 +52,7 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
         holder.Start.setText(model.getStart());
         holder.End.setText(model.getEnd());
         holder.Web.setText(model.getWeb());
+        holder.Status.setText(model.getStatus());
 
         Glide.with(holder.img.getContext())
                 .load(model.getBanner())
@@ -60,11 +61,13 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);
 
+
+
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
-                        .setContentHolder(new ViewHolder(R.layout.activity_updates_popups))
+                        .setContentHolder(new ViewHolder(R.layout.activity_status_update_popup))
                         .setExpanded(true,1150)
                         .create();
 
@@ -72,19 +75,21 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
 
                 view = dialogPlus.getHolderView();
 
-                EditText Review = view.findViewById(R.id.txtNames);
-                Button btnUpdate = view.findViewById(R.id.btnUpdates);
+                EditText Review = view.findViewById(R.id.txtNames123);
+                Button btnUpdate = view.findViewById(R.id.btnUpdates123);
 
 
                 Review.setText(model.getStatus());
 
                 dialogPlus.show();
 
+
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Map<String,Object> map = new HashMap<>();
                         map.put("status",Review.getText().toString());
+
 
                         FirebaseDatabase.getInstance().getReference().child("Event Management")
                                 .child(Objects.requireNonNull(getRef(position).getKey())).updateChildren(map)
@@ -156,7 +161,7 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
     class myViewHolders extends RecyclerView.ViewHolder{
 
         CircleImageView img;
-        TextView Name,Start,End,Web;
+        TextView Name,Start,End,Web,Status;
 
         Button btnEdit,btnDelete;
 
@@ -167,6 +172,7 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
             Start = (TextView) itemView.findViewById(R.id.nametext2vinod);
             End = (TextView) itemView.findViewById(R.id.nametext2vinod1);
             Web = (TextView) itemView.findViewById(R.id.nametext3vinod);
+            Status = (TextView) itemView.findViewById(R.id.nametext3vinod145);
 
             btnEdit = (Button) itemView.findViewById(R.id.btnEditvinod);
             btnDelete = (Button) itemView.findViewById(R.id.btnDeletevinod);
