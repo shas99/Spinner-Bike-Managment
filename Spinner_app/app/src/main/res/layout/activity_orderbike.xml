@@ -9,29 +9,29 @@
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="284dp"
-        android:layout_height="56dp"
+        android:layout_width="237dp"
+        android:layout_height="54dp"
         android:text="Order a Bike"
         android:textColor="#000000"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.874"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216" />
+        app:layout_constraintVertical_bias="0.052" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="153dp"
-        android:layout_height="132dp"
+        android:layout_width="102dp"
+        android:layout_height="86dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/bike" />
 
     <TextView
@@ -42,10 +42,10 @@
         android:textColor="#201B1B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311" />
+        app:layout_constraintVertical_bias="0.22" />
 
     <EditText
         android:id="@+id/cyclerIDInput"
@@ -56,10 +56,10 @@
         android:textColor="#0E0C0C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.389" />
+        app:layout_constraintVertical_bias="0.287" />
 
     <TextView
         android:id="@+id/textView21"
@@ -69,10 +69,10 @@
         android:textColor="#151313"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.464" />
+        app:layout_constraintVertical_bias="0.368" />
 
     <EditText
         android:id="@+id/editTextPhone"
@@ -83,10 +83,10 @@
         android:textColor="#070707"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.53" />
+        app:layout_constraintVertical_bias="0.444" />
 
     <TextView
         android:id="@+id/textView22"
@@ -96,21 +96,22 @@
         android:textColor="#191717"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.653" />
+        app:layout_constraintVertical_bias="0.518" />
 
     <Button
-        android:id="@+id/orderABikeBtn"
-        android:layout_width="200dp"
+        android:id="@+id/myTasks"
+        android:layout_width="match_parent"
         android:layout_height="54dp"
-        android:layout_marginBottom="16dp"
         android:text="@string/SubmitBtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/NICinput"
@@ -118,11 +119,12 @@
         android:layout_height="wrap_content"
         android:text="Enter your NIC"
         android:textColor="#040303"
-        app:layout_constraintBottom_toTopOf="@+id/nicInput"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bikesDropDown" />
+        app:layout_constraintTop_toBottomOf="@+id/bikesDropDown"
+        app:layout_constraintVertical_bias="0.151" />
 
     <EditText
         android:id="@+id/nicInput"
@@ -133,10 +135,10 @@
         android:textColor="#050505"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.661"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.846"
+        app:layout_constraintVertical_bias="0.725"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <EditText
@@ -146,11 +148,41 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="#050505"
-        app:layout_constraintBottom_toTopOf="@+id/nicInput"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView22"
         app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.098" />
+
+    <TextView
+        android:id="@+id/collections"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="seeOurCollections"
+        android:text="See our collections"
+        android:textColor="#5E8DE1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.606"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.641" />
+
+    <TextView
+        android:id="@+id/promoCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="196dp"
+        android:layout_marginBottom="21dp"
+        android:text="Calculate Cost"
+        android:textColor="#020202"
+        app:layout_constraintBottom_toTopOf="@+id/myTasks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nicInput" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
