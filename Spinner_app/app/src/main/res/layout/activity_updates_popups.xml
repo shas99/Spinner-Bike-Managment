@@ -8,10 +8,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#00BCD4"
+        android:background="#246EE9"
         android:gravity="center"
         android:text="Update Review"
-        android:textColor="#455A64"
+        android:textColor="#FFFF"
         android:textSize="25dp"
         android:textStyle="bold" />
 
