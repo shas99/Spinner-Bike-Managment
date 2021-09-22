@@ -46,6 +46,8 @@ implementation 'gr.pantrif:easy-android-splash-screen:0.0.1'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.orhanobut:dialogplus:1.11@aar'
     implementation 'it.xabaras.android:recyclerview-swipedecorator:1.2.3'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+
 
 
 }
