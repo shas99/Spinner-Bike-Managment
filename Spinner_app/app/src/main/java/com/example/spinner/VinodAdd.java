@@ -3,7 +3,11 @@ package com.example.spinner;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.ArrayMap;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -12,8 +16,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 
 import android.os.Bundle;
+import android.widget.Spinner;
+import android.widget.Toast;
 
-public class VinodAdd extends AppCompatActivity {
+public class VinodAdd extends AppCompatActivity implements AdapterView.OnItemClickListener {
     FirebaseDatabase rootNode;
     DatabaseReference reference;
 
@@ -76,13 +82,22 @@ public class VinodAdd extends AppCompatActivity {
 
                 String test6 = link.getText().toString();
 
+                EditText status = findViewById(R.id.status123);
+
+                String test7 = status.getText().toString();
+
+
+                Toast.makeText(VinodAdd.this, "Event has been created", Toast.LENGTH_SHORT).show();
+
+
+
 
 
 
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("Event Management");
 
-                Event_Model obj = new Event_Model(test1,test2,test3,test4,test6);
+                Event_Model obj = new Event_Model(test1,test2,test3,test4,test6,test7);
 
                 reference.child(test5).setValue(obj);
 
@@ -96,7 +111,17 @@ public class VinodAdd extends AppCompatActivity {
 
 
 
+
+
             }
         });
+    }
+
+
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        String text = parent.getItemAtPosition(position).toString();
+        System.out.print("tupe"+text);
     }
 }

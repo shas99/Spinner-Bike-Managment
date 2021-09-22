@@ -76,7 +76,7 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
                 Button btnUpdate = view.findViewById(R.id.btnUpdates);
 
 
-                Review.setText(model.getname());
+                Review.setText(model.getStatus());
 
                 dialogPlus.show();
 
@@ -84,7 +84,7 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
                     @Override
                     public void onClick(View view) {
                         Map<String,Object> map = new HashMap<>();
-                        map.put("name",Review.getText().toString());
+                        map.put("status",Review.getText().toString());
 
                         FirebaseDatabase.getInstance().getReference().child("Event Management")
                                 .child(Objects.requireNonNull(getRef(position).getKey())).updateChildren(map)

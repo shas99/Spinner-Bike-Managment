@@ -8,9 +8,9 @@
 
     <LinearLayout
         android:id="@+id/VinodlinearLayout"
-        android:layout_width="208dp"
-        android:layout_height="364dp"
-        android:layout_marginStart="1dp"
+        android:layout_width="157dp"
+        android:layout_height="363dp"
+        android:layout_marginStart="-10dp"
         android:layout_marginTop="75dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="25dp"
@@ -19,15 +19,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53">
 
         <TextView
             android:id="@+id/textView2Vinod"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:fontFamily="sans-serif-condensed-light"
-            android:text="Enter Event Name"
+            android:fontFamily="sans-serif"
+            android:text="Event Name"
             android:textColor="@color/browser_actions_title_color"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -43,8 +44,8 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
-            android:fontFamily="sans-serif-condensed-light"
-            android:text="Enter Starting Date"
+            android:fontFamily="sans-serif"
+            android:text="Starting Date"
             android:textColor="@color/browser_actions_title_color"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -54,8 +55,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:fontFamily="sans-serif-condensed-light"
-            android:text="Enter Ending Date"
+            android:fontFamily="sans-serif"
+            android:text="Ending Date"
             android:textColor="@color/browser_actions_title_color"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -65,39 +66,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:fontFamily="sans-serif-condensed-light"
-            android:text="Enter Web Link"
+            android:fontFamily="sans-serif"
+            android:text="Web Link"
             android:textColor="@color/browser_actions_title_color"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-<!-- New -->
+        <!-- New -->
 
         <TextView
             android:id="@+id/textView6Vinod123"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:fontFamily="sans-serif-condensed-light"
-            android:text="Enter Banner Link"
+            android:fontFamily="sans-serif"
+            android:text="Banner Link"
             android:textColor="@color/browser_actions_title_color"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-<!-- New -->
-
+        <!-- New -->
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="167dp"
-        android:layout_height="364dp"
+        android:layout_width="198dp"
+        android:layout_height="359dp"
         android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
         android:layout_marginTop="75dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="25dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -118,16 +116,16 @@
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck" />
 
-<!-- Edited input type-->
+        <!-- Edited input type-->
 
         <EditText
             android:id="@+id/ID_2Vinod"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:fontFamily="sans-serif-condensed-light"
-            android:inputType="date"
+            android:fontFamily="sans-serif-light"
             android:hint="dd/mm/yyyy"
+            android:inputType="date"
             android:minHeight="48dp"
             android:text=""
             android:textSize="20sp"
@@ -139,9 +137,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:fontFamily="sans-serif-condensed-light"
-            android:inputType="date"
+            android:fontFamily="sans-serif-light"
             android:hint="dd/mm/yyyy"
+            android:inputType="date"
             android:text=""
             android:textSize="20sp"
             android:textStyle="bold"
@@ -152,31 +150,44 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:fontFamily="sans-serif-condensed-light"
+            android:fontFamily="sans-serif-light"
             android:inputType="textWebEmailAddress"
             android:text=""
             android:textSize="20sp"
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck" />
 
-<!--Edited input type-->
+        <!--Edited input type-->
 
 
-<!--  New  -->
+        <!--  New  -->
 
         <EditText
             android:id="@+id/id_4Vinod122"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:fontFamily="sans-serif-condensed-light"
+            android:fontFamily="sans-serif-light"
             android:inputType="textWebEmailAddress"
             android:text=""
             android:textSize="20sp"
             android:textStyle="bold"
             tools:ignore="SpeakableTextPresentCheck" />
 
-<!--  New  -->
+        <EditText
+            android:id="@+id/status123"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:inputType="textWebEmailAddress"
+            android:text="Status"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="SpeakableTextPresentCheck"
+             />
+
+        <!--  New  -->
 
     </LinearLayout>
 
@@ -231,7 +242,8 @@
         app:layout_constraintBottom_toTopOf="@+id/button_05Vinod"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/VinodlinearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/VinodlinearLayout"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

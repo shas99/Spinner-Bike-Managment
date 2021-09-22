@@ -2,17 +2,20 @@ package com.example.spinner;
 
 public class Event_Model {
 
-    String name,Start,End,Web,Banner;
+    String name,Start,End,Web,Banner,Status;
 
     public Event_Model() {
     }
 
-    public Event_Model(String name, String start, String end, String web, String banner) {
+
+
+    public Event_Model(String name, String start, String end, String web, String banner, String status) {
         this.name = name;
         Start = start;
         End = end;
         Web = web;
         Banner = banner;
+        Status = status;
     }
 
     public String getEnd() {
@@ -53,5 +56,13 @@ public class Event_Model {
 
     public void setStart(String start) {
         Start = start;
+    }
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String status) {
+        Status = status;
     }
 }
