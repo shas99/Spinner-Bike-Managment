@@ -66,8 +66,8 @@
 
     <Button
         android:id="@+id/updatebtn"
-        android:layout_width="194dp"
-        android:layout_height="39dp"
+        android:layout_width="193dp"
+        android:layout_height="54dp"
         android:text="@string/UpdateProfileButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,16 +78,16 @@
 
     <Button
         android:id="@+id/deletebtn555"
-        android:layout_width="179dp"
-        android:layout_height="38dp"
+        android:layout_width="176dp"
+        android:layout_height="55dp"
         android:backgroundTint="#E11616"
         android:text="@string/DeleteProfileButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintHorizontal_bias="0.915"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.875" />
+        app:layout_constraintVertical_bias="0.877" />
 
     <ImageView
         android:id="@+id/imageView4"
