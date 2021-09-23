@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="@drawable/dashbg"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -18,17 +19,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_bold"
             android:text="Dashboard"
-            android:textColor="#5E5E5E"
-            android:textSize="24dp" />
 
-        <View
-            android:layout_width="40dp"
-            android:layout_height="6dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="8dp"
-            android:background="@drawable/bg_view">
-
-        </View>
+            android:textColor="@color/white"
+            android:textSize="30dp" />
 
     </LinearLayout>
 
@@ -37,13 +30,14 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_regular"
         android:text="Good Day To Ride "
-        android:textColor="#5E5E5E"
+        android:textColor="@color/white"
         android:textSize="18dp" />
 
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
         android:layout_marginTop="22dp">
 
         <LinearLayout
@@ -284,7 +278,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/roboto_medium"
             android:text="Lets Get Started"
-            android:textColor="#5E5E5E"
+            android:textColor="@color/white"
             android:textSize="18dp" />
 
         <View
@@ -292,7 +286,7 @@
             android:layout_height="2dp"
             android:layout_gravity="center"
             android:layout_marginLeft="8dp"
-            android:background="#7a8b8b8b"></View>
+            android:background="@color/white"></View>
 
     </LinearLayout>
 
@@ -326,11 +320,13 @@
                     android:textSize="18dp" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
+                    android:layout_width="96dp"
+                    android:layout_height="73dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/walking" />
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:src="@drawable/myproficon" />
 
             </RelativeLayout>
 
@@ -395,16 +391,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="Driving"
+                    android:text="Our Bikes"
                     android:textColor="#5E5E5E"
                     android:textSize="18dp" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
+                    android:layout_width="92dp"
+                    android:layout_height="88dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/convertible" />
+                    android:layout_marginBottom="0dp"
+                    android:src="@drawable/bikeicon" />
 
             </RelativeLayout>
 
@@ -428,7 +425,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="Train"
+                    android:text="Events"
                     android:textColor="#5E5E5E"
                     android:textSize="18dp" />
 

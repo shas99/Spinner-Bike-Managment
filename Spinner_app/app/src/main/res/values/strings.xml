@@ -5,7 +5,7 @@
     <string name="Emailtxt">Enter Email</string>
     <string name="PasswordTxt">Enter Password</string>
     <string name="UserProfiletxt">User Profile</string>
-    <string name="UpdateProfileButton">Update</string>
+    <string name="UpdateProfileButton">Update My Details</string>
     <string name="DeleteProfileButton">Delete</string>
     <string name="getEmailInput">XXXXXXX@XXXXXX.com</string>
     <string name="getUserName">XXXXXX XXXXXXXX</string>
