@@ -38,6 +38,7 @@ import androidx.core.app.NotificationManagerCompat;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class Weekly_target extends AppCompatActivity {
@@ -50,7 +51,7 @@ public class Weekly_target extends AppCompatActivity {
     String dum = "";
     DatabaseReference reference;
     DatabaseReference referenceret;
-
+    private static DecimalFormat df2 = new DecimalFormat("#.##");
     int timeleft;
     float totaltime = (float) Integer.parseInt(UserDetails.getTarget());
     private FirebaseUser user;
@@ -166,7 +167,8 @@ public class Weekly_target extends AppCompatActivity {
 
 
         float f = Float.parseFloat(x);
-        String p = String.valueOf(f/60);
+        String p = String.valueOf(df2.format(f/60));
+
         targetLeft.setText(p + " Minutes");
 
         int timeInmillis = Integer.parseInt(x) * 1000;
