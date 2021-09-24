@@ -32,7 +32,8 @@ public class Target extends AppCompatActivity {
     public void update55(View view){
         if(isChaged()){
             Toast.makeText(this, "Data has been updated", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(Target.this,UserProfileActivity.class);
+            Weekly_target.self_intent.recreate();
+            Intent i = new Intent(Target.this,Weekly_target.class);
             startActivity(i);
         }
     }
@@ -53,6 +54,7 @@ public class Target extends AppCompatActivity {
         else{
             return false;
         }
+
 
     }
 }

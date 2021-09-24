@@ -55,6 +55,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CREATE"
-        app:srcCompat="@drawable/chamathpng" />
+        app:srcCompat="@drawable/_23790" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

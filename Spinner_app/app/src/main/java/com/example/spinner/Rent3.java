@@ -50,6 +50,7 @@ public class Rent3 extends AppCompatActivity {
 
         System.out.println("qqqqqqq" + d +m);
 
+        System.out.println("789" + d);
 
 
         switch(d) {

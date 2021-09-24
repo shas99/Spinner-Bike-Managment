@@ -38,7 +38,7 @@
     <string name="Welcome">Welcome</string>
     <string name="btnRent">RENT</string>
     <string name="btnDonate">Donate</string>
-    <string name="Loyality">GOLD</string>
+    <string name="Loyality">  GOLD</string>
     <string name="points">97</string>
     <string name="size_txt">Choose a size</string>
     <string name="smalltxt">Small</string>
@@ -178,4 +178,11 @@
         <item>Lion Rage - Price 32K</item>
         <item>BigSur Blue - Price 56K</item>
     </string-array>
+
+    <string-array name="status">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
 </resources>
