@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/orderABikeBtn"
-        android:layout_width="177dp"
-        android:layout_height="46dp"
+        android:layout_width="189dp"
+        android:layout_height="58dp"
         android:text="Order A bike"
         app:layout_constraintBottom_toTopOf="@+id/LogoutBtn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,10 +64,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.471" />
 
-    <Button
+<Button
         android:id="@+id/updatebtn"
-        android:layout_width="193dp"
-        android:layout_height="54dp"
+        android:layout_width="194dp"
+        android:layout_height="59dp"
         android:text="@string/UpdateProfileButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,18 +76,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.88" />
 
-    <Button
+  <Button
         android:id="@+id/deletebtn555"
-        android:layout_width="176dp"
-        android:layout_height="55dp"
+        android:layout_width="182dp"
+        android:layout_height="58dp"
         android:backgroundTint="#E11616"
         android:text="@string/DeleteProfileButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintHorizontal_bias="0.93"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.877" />
+        app:layout_constraintVertical_bias="0.875" />
+
 
     <ImageView
         android:id="@+id/imageView4"
@@ -114,12 +115,12 @@
 
     <Button
         android:id="@+id/LogoutBtn"
-        android:layout_width="403dp"
-        android:layout_height="55dp"
+        android:layout_width="486dp"
+        android:layout_height="54dp"
         android:text="Log out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -153,8 +154,8 @@
 
     <Button
         android:id="@+id/myTasks"
-        android:layout_width="177dp"
-        android:layout_height="49dp"
+        android:layout_width="179dp"
+        android:layout_height="60dp"
         android:text="myTasks"
         app:layout_constraintBottom_toTopOf="@+id/LogoutBtn"
         app:layout_constraintEnd_toEndOf="parent"

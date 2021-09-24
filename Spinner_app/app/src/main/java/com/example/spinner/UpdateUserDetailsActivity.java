@@ -3,6 +3,8 @@ package com.example.spinner;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -53,6 +55,11 @@ public class UpdateUserDetailsActivity extends AppCompatActivity {
 
         if(isChaged()){
             Toast.makeText(this, "Data has been updated", Toast.LENGTH_SHORT).show();
+            final MediaPlayer mp = MediaPlayer.create(this, R.raw.apple_pay);
+            mp.start();
+            Intent intent = new Intent(UpdateUserDetailsActivity.this, Dashboard.class);
+            startActivity(intent);
+
         }
 
 
@@ -78,16 +85,13 @@ public class UpdateUserDetailsActivity extends AppCompatActivity {
 
 
 
+
             System.out.println("qqqq" + email + name + phone);
 
             reference.child(ID).child("email").setValue(email);
 
 
             reference.child(ID).child("name").setValue(name);
-
-
-
-
             reference.child(ID).child("mobileNo").setValue(phone);
 
 
