@@ -190,7 +190,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Bike Key"
+        android:hint="Bicycle Key"
         app:layout_constraintBottom_toTopOf="@+id/button_05"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
