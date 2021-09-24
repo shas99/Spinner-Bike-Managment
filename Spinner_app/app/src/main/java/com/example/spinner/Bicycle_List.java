@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -71,18 +72,50 @@ DatabaseReference reference;
 
 
 
-
-
-
-
-
                 EditText id5 = findViewById(R.id.id_9999);
 
 
                 String test5 = id5.getText().toString();
 
 
+                if(test1.isEmpty()){
+                    Brand.setError("Brand Name Is Required!!!");
+                    Brand.requestFocus();
+                    return;
+                }
 
+                if(test2.isEmpty()){
+                    Name.setError("Bicycle Name Is Required!!!");
+                    Name.requestFocus();
+                    return;
+                }
+
+                if(test3.isEmpty()){
+                    Origin.setError("Bicycle Origin Country Is Required!!!");
+                    Origin.requestFocus();
+                    return;
+                }
+
+                if(test4.isEmpty()){
+                    Review.setError("Bicycle Review Is Required!!!");
+                    Review.requestFocus();
+                    return;
+                }
+
+                if(test6.isEmpty()){
+                    Image.setError("Bicycle Image Is Required!!!");
+                    Image.requestFocus();
+                    return;
+                }
+
+                if(test5.isEmpty()){
+                    id5.setError("A Bicycle Key Should Be Given Of Your Choice!!!");
+                    id5.requestFocus();
+                    return;
+                }
+
+
+                Toast.makeText(Bicycle_List.this, "A New Bicycle Has Been Added To The Inventory!", Toast.LENGTH_SHORT).show();
 
 
 
