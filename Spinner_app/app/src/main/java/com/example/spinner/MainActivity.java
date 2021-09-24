@@ -1,6 +1,7 @@
 package com.example.spinner;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,7 +28,7 @@ private Button loginBtn;
 
 
 private FirebaseAuth mAuth;
-private ProgressBar progressBar;
+
 
 
 
@@ -48,6 +49,7 @@ loginBtn=(Button) findViewById(R.id.btnLogin);
         emailLogin=(EditText)findViewById(R.id.emailLogin);
         passwordLogin=(EditText) findViewById(R.id.passwordLogin);
 
+
         mAuth= FirebaseAuth.getInstance();
 
 
@@ -62,7 +64,10 @@ loginBtn=(Button) findViewById(R.id.btnLogin);
                 startActivity(new Intent(this,CreateProfileActivity.class));
                 break;
             case R.id.btnLogin:
+                final MediaPlayer mp = MediaPlayer.create(this, R.raw.pidgin_login);
+                mp.start();
                 userLogin();
+
                 break;
             case R.id.forgotPassword:
                 startActivity(new Intent(this,ForgotPasswordActivity.class));
@@ -75,9 +80,10 @@ loginBtn=(Button) findViewById(R.id.btnLogin);
         String emailLoginInput = emailLogin.getText().toString().trim();
         String passwordLoginInput = passwordLogin.getText().toString().trim();
 
-            if(emailLoginInput.isEmpty()){
+        if(emailLoginInput.isEmpty()){
                 emailLogin.setError("Email is required");
                 emailLogin.requestFocus();
+
                 return;
             }
         if(passwordLoginInput.isEmpty()){
@@ -94,6 +100,7 @@ loginBtn=(Button) findViewById(R.id.btnLogin);
 
                             FirebaseUser user =FirebaseAuth.getInstance().getCurrentUser();
                             if(user.isEmailVerified()){
+
                                 startActivity(new Intent(MainActivity.this,Dashboard.class));
                             }else{
                                 user.sendEmailVerification();
