@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/rent3_1545"
     tools:context=".Rent3">
 
     <ImageView
@@ -23,7 +24,7 @@
         android:layout_width="89dp"
         android:layout_height="189dp"
         android:layout_marginStart="59dp"
-        android:layout_marginTop="241dp"
+        android:layout_marginTop="250dp"
         android:layout_marginEnd="263dp"
         android:layout_marginBottom="173dp"
         android:orientation="vertical"
@@ -36,37 +37,44 @@
             android:id="@+id/IDview"
             android:layout_width="match_parent"
             android:layout_height="31dp"
-            android:text="@string/cycleID" />
+            android:text="@string/cycleID"
+            android:textColor="#FFFFFF"
+            android:visibility="invisible"/>
 
         <TextView
             android:id="@+id/PriceView"
             android:layout_width="match_parent"
             android:layout_height="33dp"
-            android:text="@string/PriceView" />
+            android:text="@string/PriceView"
+            android:textColor="#FBFAFA" />
 
         <TextView
             android:id="@+id/TimeView"
             android:layout_width="match_parent"
             android:layout_height="29dp"
-            android:text="@string/TimeView" />
+            android:text="@string/TimeView"
+            android:textColor="#FBFBFB" />
 
         <TextView
             android:id="@+id/DateView"
             android:layout_width="match_parent"
             android:layout_height="29dp"
-            android:text="@string/DateView" />
+            android:text="@string/DateView"
+            android:textColor="#FFFFFF" />
 
         <TextView
             android:id="@+id/SizeView"
             android:layout_width="match_parent"
             android:layout_height="32dp"
-            android:text="@string/SizeView" />
+            android:text="@string/SizeView"
+            android:textColor="#FFFFFF" />
 
         <TextView
             android:id="@+id/PremiumView"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="@string/PremiumView" />
+            android:text="@string/PremiumView"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
     <TextView
@@ -74,6 +82,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ID"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.455"
@@ -86,18 +96,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/pricetxt"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.469" />
+        app:layout_constraintVertical_bias="0.474" />
 
     <TextView
         android:id="@+id/TimetxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Timetxt"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.439"
@@ -110,36 +122,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/OrderDateView"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571" />
+        app:layout_constraintVertical_bias="0.565" />
 
     <TextView
         android:id="@+id/SizetxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/SizetxtView"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.618" />
+        app:layout_constraintVertical_bias="0.607" />
 
     <TextView
         android:id="@+id/PremiumtxtView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="24dp"
+        android:layout_height="16dp"
         android:text="@string/PremiumtxtView"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.662" />
+        app:layout_constraintVertical_bias="0.638" />
 
     <Button
         android:id="@+id/StartRidingbtn"

@@ -33,32 +33,6 @@ public class BicycleMainMenuActivity extends AppCompatActivity {
             }
         });
 
-        Button addBtn3 = (Button) findViewById(R.id.UPDATE);
-        addBtn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(BicycleMainMenuActivity.this,Review_Page.class);
-                startActivity(intent);
-            }
-        });
-
-        Button addBtn4 = (Button) findViewById(R.id.DELETE);
-        addBtn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(BicycleMainMenuActivity.this,My_Delete.class);
-                startActivity(intent);
-            }
-        });
-
-        Button addBtn5 = (Button) findViewById(R.id.SELECT);
-        addBtn5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(BicycleMainMenuActivity.this,Upgrades_1.class);
-                startActivity(intent);
-            }
-        });
 
 
     }

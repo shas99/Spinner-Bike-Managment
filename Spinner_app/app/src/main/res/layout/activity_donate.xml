@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/rent2back"
     tools:context=".Donate">
 
     <ImageView
@@ -21,9 +21,10 @@
 
     <TextView
         android:id="@+id/pointsView"
-        android:layout_width="43dp"
+        android:layout_width="141dp"
         android:layout_height="54dp"
         android:fontFamily="cursive"
+        android:gravity="center"
         android:text="@string/points"
         android:textColor="#000000"
         android:textSize="34sp"
@@ -39,6 +40,7 @@
         android:layout_height="81dp"
         android:background="@drawable/custom_button"
         android:fontFamily="monospace"
+        android:onClick="update_1"
         android:text="@string/Donatebtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
