@@ -23,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -51,12 +52,83 @@ public class MainAdapterChamath extends FirebaseRecyclerAdapter <BikeRetreiveMai
 
 
 
+
         Glide.with(holder.img.getContext())
                 .load(model.getImage())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
                 .circleCrop()
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);
+
+        String[] date = Calendar.getInstance().getTime().toString().split(" ");
+        String Day = date[2];
+        String Month = date[1];
+        String Year = date[5];
+        int months = 0;
+
+        holder.Return.setText(model.getLease());
+
+        switch(Month){
+            case "Jan":
+                months = 1;
+                break;
+            case "Feb":
+                months = 2;
+                break;
+            case "Mar":
+                months = 3;
+                break;
+            case "Apr":
+                months = 4;
+                break;
+            case "May":
+                months = 5;
+                break;
+            case "Jun":
+                months = 6;
+                break;
+            case "Jul":
+                months = 7;
+                break;
+            case "Aug":
+                months = 8;
+                break;
+            case "Sep":
+                months = 9;
+                break;
+            case "Oct":
+                months = 10;
+                break;
+            case "Nov":
+                months = 11;
+                break;
+            case "Dec":
+                months = 12;
+                break;
+        }
+
+        if(months+Integer.parseInt(model.getLease()) > 12){
+
+            String LeasingDate;
+
+            int ret = Integer.parseInt(model.getLease())-(12 - months);
+            LeasingDate = model.getDay()+"/"+String.valueOf(ret)+"/"+String.valueOf(Integer.parseInt(model.getYear())+1);
+            holder.Return.setText((LeasingDate));
+            System.out.println("This the ret "+ret);
+
+        }else{
+
+            String LeasingDate;
+
+            int ret = Integer.parseInt(model.getLease())+(months);
+            LeasingDate = model.getDay()+"/"+String.valueOf(ret)+"/"+Year;
+            holder.Return.setText((LeasingDate));
+
+        }
+
+
+
+
 
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -149,7 +221,7 @@ public class MainAdapterChamath extends FirebaseRecyclerAdapter <BikeRetreiveMai
     static class myViewHolders extends RecyclerView.ViewHolder{
 
         CircleImageView img;
-        TextView Brand,Name,Origin,Review;
+        TextView Brand,Name,Origin,Review,Return;
 
         Button btnEdit,btnDelete;
 
@@ -165,6 +237,8 @@ public class MainAdapterChamath extends FirebaseRecyclerAdapter <BikeRetreiveMai
 
             btnEdit = (Button) itemView.findViewById(R.id.btnEdit);
             btnDelete = (Button) itemView.findViewById(R.id.btnDelete);
+
+            Return = (TextView) itemView.findViewById(R.id.textLease);
 
         }
     }
