@@ -170,20 +170,6 @@
     <string name="DataDate">20/11/2021</string>
     <string name="DataEdate">22/11/2021</string>
     <string name="dataDes">Comming soon!</string>
-    <string name="enter_bicycle_brand123">Enter Bicycle Brand</string>
-    <string name="enter_bicycle_name123">Enter Bicycle Name</string>
-    <string name="enter_bicycle_origin123">Enter Bicycle Origin</string>
-    <string name="bicycle_key123">Bicycle Key</string>
-    <string name="enter_bicycle_review123">Enter Bicycle Review</string>
-    <string name="leasing_duration123">Leasing Duration</string>
-    <string name="image123">Image</string>
-    <string name="todoimg123456789">TODOImg123456</string>
-    <string name="brand12345">Brand</string>
-    <string name="name12345">Name</string>
-    <string name="origin12345">Origin</string>
-    <string name="cycler_opinion12345">Cycler Opinion</string>
-    <string name="return_date12345">Return Date</string>
-    <string name="remove_bicycle12345">Remove Bicycle</string>
 
     <string-array name="bikes">
         <item>BMX Drift -  Price 12K</item>

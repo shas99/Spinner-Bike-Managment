@@ -20,6 +20,7 @@ import java.util.UUID;
 
 public class UserFeedback extends AppCompatActivity {
 
+    //Init Assets
     private EditText mName ,mDesc;
     private Button mSavebtn,mShowbtn;
     private FirebaseFirestore db;
@@ -33,12 +34,11 @@ public class UserFeedback extends AppCompatActivity {
         setContentView(R.layout.activity_user_feedback);
 
 
-
+        //Layouts hooks
         mName = findViewById(R.id.edit_name);
         mDesc=findViewById(R.id.edit_desc);
         mSavebtn=findViewById(R.id.savebtn);
         mShowbtn=findViewById(R.id.showBtn);
-
         db =FirebaseFirestore.getInstance();
 
 
@@ -57,7 +57,7 @@ public class UserFeedback extends AppCompatActivity {
         }
 
 
-
+        //Handle function -> showTask()
         mShowbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,14 +66,12 @@ public class UserFeedback extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
+        //Handle function -> saveTask()
         mSavebtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+
+
+@Override
+public void onClick(View v) {
                 String name = mName.getText().toString();
                 String desc =mDesc.getText().toString();
 
@@ -85,13 +83,15 @@ public class UserFeedback extends AppCompatActivity {
                     String id = UUID.randomUUID().toString();
                     saveToFireStore(id , name,desc);
                 }
-
-
             }
+
+
         });
 
     }
-    private void updateToFireStore(String id,String name,String desc){
+
+
+private void updateToFireStore(String id,String name,String desc){
         db.collection("User Feedback").document(id).update("name",name,"desc",desc)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -110,7 +110,7 @@ public class UserFeedback extends AppCompatActivity {
         });
     }
 
-    private void saveToFireStore(String id,String name ,String desc){
+private void saveToFireStore(String id,String name ,String desc){
 
         if(!name.isEmpty() && !desc.isEmpty()){
 

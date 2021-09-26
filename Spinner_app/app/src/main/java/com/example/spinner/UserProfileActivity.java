@@ -19,13 +19,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class UserProfileActivity extends AppCompatActivity {
-
-private Button logout;
-private Button orderAbikebtn,updateBtn,deleteBtn,myTaskBtn;
-
-private FirebaseUser user;
-private DatabaseReference reference;
-private String userID;
+          //Init Assets
+        private Button logout;
+        private Button orderAbikebtn,updateBtn,deleteBtn,myTaskBtn;
+        private FirebaseUser user;
+        private DatabaseReference reference;
+        private String userID;
 
     DatabaseReference referenceTest;
     @Override
@@ -33,8 +32,16 @@ private String userID;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userprofile);
         referenceTest = FirebaseDatabase.getInstance().getReference("UsersProfile");
-        logout = (Button) findViewById(R.id.LogoutBtn);
 
+        //Layouts hooks
+        logout = (Button) findViewById(R.id.LogoutBtn);
+        orderAbikebtn =(Button)findViewById(R.id.orderABikeBtn);
+        myTaskBtn =(Button)findViewById(R.id.myTasks);
+        deleteBtn=(Button)findViewById(R.id.deletebtn555);
+        updateBtn=(Button)findViewById(R.id.updatebtn);
+
+
+        //Handle button logout()
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,7 +56,7 @@ private String userID;
 
 
         });
-        orderAbikebtn =(Button)findViewById(R.id.orderABikeBtn);
+        //Handle button OrderABike()
         orderAbikebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,37 +67,28 @@ private String userID;
 
             }
         });
-        //MyTask
-        myTaskBtn =(Button)findViewById(R.id.myTasks);
+        //MyTask button handle
         myTaskBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(UserProfileActivity.this, UserFeedback.class);
                 startActivity(intent);
-
-
-
             }
         });
 
-        deleteBtn=(Button)findViewById(R.id.deletebtn555);
+      //Handle button deletAxcc()
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 referenceTest.child(UserDetails.ID()).removeValue();
-
                 Toast.makeText(UserProfileActivity.this, "Hope To See You Again , Bye !", Toast.LENGTH_LONG).show();
-
-
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(UserProfileActivity.this,MainActivity.class));
-
 
             }
         });
 
-        updateBtn=(Button)findViewById(R.id.updatebtn);
+      //Update button handling
         updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -21,28 +21,33 @@ import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
+    //Init Assets
     private ShowActivity activity;
     private List<Model> mList;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
 
-    public MyAdapter(ShowActivity activity,List<Model> mList){
+public MyAdapter(ShowActivity activity,List<Model> mList){
         this.activity=activity;
         this.mList =mList;
 
     }
-    public void updateData(int position){
-        Model item = mList.get(position);
-        Bundle bundle = new Bundle();
-        bundle.putString("uId",item.getId());
-        bundle.putString("uName",item.getName());
-        bundle.putString("uDesc",item.getDesc());
-        Intent intent =new Intent(activity,UserFeedback.class);
-        intent.putExtras(bundle);
-        activity.startActivity(intent);
 
-    }
-    public void deleteData(int position){
+//Update Tasks
+public void updateData(int position) {
+    Model item = mList.get(position);
+    Bundle bundle = new Bundle();
+    bundle.putString("uId", item.getId());
+    bundle.putString("uName", item.getName());
+    bundle.putString("uDesc", item.getDesc());
+    Intent intent = new Intent(activity, UserFeedback.class);
+    intent.putExtras(bundle);
+    activity.startActivity(intent);
+
+}
+
+//Delete Task
+public void deleteData(int position){
 
         Model item = mList.get(position);
         db.collection("User Feedback").document(item.getId()).delete()
@@ -59,37 +64,39 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                 });
     }
 
-    private void notifyRemoved(int position){
+private void notifyRemoved(int position){
         mList.remove(position);
         notifyItemRemoved(position);
         activity.showData();
     }
 
 
-    @NonNull
-    @Override
-    public MyViewHolder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
+@NonNull
+@Override
+public MyViewHolder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
         View v= LayoutInflater.from(activity).inflate(R.layout.item,parent,false);
         return new MyViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyAdapter.MyViewHolder holder, int position) {
+public void onBindViewHolder(@NonNull MyAdapter.MyViewHolder holder, int position) {
         holder.name.setText(mList.get(position).getName());
         holder.desc.setText(mList.get(position).getDesc());
 
     }
 
+
+    //Count Tasks
     @Override
-    public int getItemCount() {
+public int getItemCount() {
         return mList.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+public static class MyViewHolder extends RecyclerView.ViewHolder{
 
         TextView name,desc;
 
-        public MyViewHolder(@NonNull View itemView){
+    public MyViewHolder(@NonNull View itemView){
             super(itemView);
             name =itemView.findViewById(R.id.name_text);
             desc =itemView.findViewById(R.id.desc_text);
