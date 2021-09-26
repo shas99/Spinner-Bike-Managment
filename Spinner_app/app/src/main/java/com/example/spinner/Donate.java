@@ -35,9 +35,11 @@ public class Donate extends AppCompatActivity {
 
 
    public void update_1(View view){
-
-       if(isChaged()){
-           Toast.makeText(this, "Data has been updated", Toast.LENGTH_SHORT).show();
+        if(Integer.parseInt(UserDetails.getPoints()) < 100){
+            Toast.makeText(this, "You don't have enough points to donate :(", Toast.LENGTH_SHORT).show();
+        }
+       else if(isChaged()){
+           Toast.makeText(this, "Thank you for donating :)", Toast.LENGTH_SHORT).show();
         }
 
 

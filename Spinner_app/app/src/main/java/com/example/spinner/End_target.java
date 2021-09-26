@@ -7,6 +7,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
@@ -14,6 +15,8 @@ import androidx.core.app.NotificationManagerCompat;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Calendar;
 
 public class End_target extends AppCompatActivity {
     DatabaseReference referenceTest;
@@ -41,11 +44,27 @@ public class End_target extends AppCompatActivity {
             }
 
         });
+
         b2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent i = new Intent(End_target.this, UserProfileActivity.class);
-                startActivity(i);
+
+
+
+                String[] time = Help.getTime().split(":");
+                String[] date = Calendar.getInstance().getTime().toString().split(" ");
+                System.out.println("++++" + time[0] + "lll" + time[1]+ "kkkk" + time[2]);
+                String[] currentTime = date[3].split(":");
+                System.out.println("++++" + currentTime[0] + "lll" + currentTime[1]+ "kkkk" + currentTime[2]);
+                if(Integer.parseInt(time[0]) == Integer.parseInt(currentTime[0])){
+                    int timeinfloat = Integer.parseInt(currentTime[1]) - Integer.parseInt(time[1]);
+                    double min = timeinfloat / 60.0;
+                    String toast = "Your total charge is " + String.valueOf(Double.parseDouble(Help.getPrice())*min)  + "rs, Please go to the counter to pay the fee";
+                    System.out.println("++++" + currentTime[0] + "lll" + currentTime[1]+ "kkkk" + currentTime[2] + "1111");
+                    Toast.makeText(getApplicationContext(),toast,Toast.LENGTH_LONG).show();
+                }
+                System.out.println("+++" + date[3]);
+
                 referenceTest.child(UserDetails.ID()).removeValue();
                 //notification start
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(End_target.this,"lemubitA")

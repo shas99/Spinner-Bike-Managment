@@ -2,8 +2,8 @@ package com.example.spinner;
 
 public class Help {
 
-    String ID, Size, Time, Date,Price;
-    Boolean Premium;
+    private static String ID, Size, Time, Date,Price;
+    private static Boolean Premium;
 
     public Help() {
 
@@ -18,11 +18,11 @@ public class Help {
         Price = price;
     }
 
-    public String getPrice() {
+    public static String getPrice() {
         return Price;
     }
 
-    public void setPrice(String price) {
+    public static void setPrice(String price) {
         Price = price;
     }
 
@@ -34,35 +34,35 @@ public class Help {
         this.ID = ID;
     }
 
-    public String getSize() {
+    public static String getSize() {
         return Size;
     }
 
-    public void setSize(String size) {
+    public static void setSize(String size) {
         Size = size;
     }
 
-    public String getTime() {
+    public static String getTime() {
         return Time;
     }
 
-    public void setTime(String time) {
+    public static void setTime(String time) {
         Time = time;
     }
 
-    public String getDate() {
+    public static String getDate() {
         return Date;
     }
 
-    public void setDate(String date) {
+    public static void setDate(String date) {
         Date = date;
     }
 
-    public Boolean getPremium() {
+    public static Boolean getPremium() {
         return Premium;
     }
 
-    public void setPremium(Boolean premium) {
+    public static void setPremium(Boolean premium) {
         Premium = premium;
     }
 }
