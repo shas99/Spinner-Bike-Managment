@@ -11,7 +11,7 @@
         android:id="@+id/orderABikeBtn"
         android:layout_width="189dp"
         android:layout_height="58dp"
-        android:text="Order A bike"
+        android:text="@string/order_a_bike1"
         app:layout_constraintBottom_toTopOf="@+id/LogoutBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.034"
@@ -24,16 +24,16 @@
         android:layout_width="38dp"
         android:layout_height="33dp"
 
-        android:drawableRight="@drawable/emailprof"
         android:textColor="#171616"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36" />
+        app:layout_constraintVertical_bias="0.36"
+        app:drawableRightCompat="@drawable/emailprof" />
 
     <TextView
         android:id="@+id/emailDisplay"
@@ -54,7 +54,6 @@
         android:layout_width="39dp"
         android:layout_height="37dp"
 
-        android:drawableRight="@drawable/genderprof"
         android:textColor="#131313"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -62,7 +61,8 @@
         app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.471" />
+        app:layout_constraintVertical_bias="0.471"
+        app:drawableRightCompat="@drawable/genderprof" />
 
 <Button
         android:id="@+id/updatebtn"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.88" />
 
-  <Button
+    <Button
         android:id="@+id/deletebtn555"
         android:layout_width="182dp"
         android:layout_height="58dp"
@@ -87,7 +87,8 @@
         app:layout_constraintHorizontal_bias="0.93"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.875" />
+        app:layout_constraintVertical_bias="0.875"
+        tools:ignore="TextContrastCheck" />
 
 
     <ImageView
@@ -99,7 +100,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
-        app:srcCompat="@drawable/propic" />
+        app:srcCompat="@drawable/propic"
+        android:contentDescription="@string/todo2" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -111,19 +113,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.02"
-        app:srcCompat="@drawable/profilepagepic1" />
+        app:srcCompat="@drawable/profilepagepic1"
+        android:contentDescription="@string/todoxs" />
 
     <Button
         android:id="@+id/LogoutBtn"
         android:layout_width="486dp"
         android:layout_height="54dp"
-        android:text="Log out"
+        android:text="@string/log_out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/sexDisplay"
@@ -156,35 +160,36 @@
         android:id="@+id/myTasks"
         android:layout_width="179dp"
         android:layout_height="60dp"
-        android:text="myTasks"
+        android:text="@string/mytasks1"
         app:layout_constraintBottom_toTopOf="@+id/LogoutBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.914"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.832" />
+        app:layout_constraintVertical_bias="0.832"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
 
     <TextView
         android:id="@+id/mobileNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableRight="@drawable/mobileprof"
         android:textColor="#000000"
-        android:textSize="14dp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.583" />
+        app:layout_constraintVertical_bias="0.583"
+        app:drawableRightCompat="@drawable/mobileprof" />
 
     <TextView
         android:id="@+id/mobileNumberDisplay"
         android:layout_width="216dp"
         android:layout_height="34dp"
         android:textColor="#000000"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/updatebtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"

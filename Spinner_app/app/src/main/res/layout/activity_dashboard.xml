@@ -18,10 +18,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_bold"
-            android:text="Dashboard"
+            android:text="@string/dashboard"
 
             android:textColor="@color/white"
-            android:textSize="30dp" />
+            android:textSize="30sp" />
 
     </LinearLayout>
 
@@ -29,9 +29,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_regular"
-        android:text="Good Day To Ride "
+        android:text="@string/good_day_to_ride"
         android:textColor="@color/white"
-        android:textSize="18dp" />
+        android:textSize="18sp" />
 
 
     <androidx.cardview.widget.CardView
@@ -56,9 +56,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_mediumitalic"
-                    android:text="Good Morning"
+                    android:text="@string/good_morning"
                     android:textColor="#ffff"
-                    android:textSize="18dp" />
+                    android:textSize="18dp"
+                    tools:ignore="TextContrastCheck" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -68,7 +69,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="28dp"
-                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
                         android:src="@drawable/cloud" />
 
                 </RelativeLayout>
@@ -98,7 +99,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:fontFamily="@font/roboto_medium"
-                        android:text="21 C"
+                        android:text="@string/_21_c"
                         android:textColor="#ffff"
                         android:textSize="18dp" />
 
@@ -123,7 +124,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sun"
+                        android:text="@string/sun"
                         android:textColor="#ffff" />
 
                     <TextView
@@ -195,7 +196,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Wed"
+                        android:text="@string/wed"
                         android:textColor="#ffff" />
 
                     <TextView
@@ -219,7 +220,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Thu"
+                        android:text="@string/thu"
                         android:textColor="#ffff" />
 
                     <TextView
