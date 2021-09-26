@@ -46,23 +46,29 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
         super(options);
     }
 
+
+    //Retrieve part 1
     @SuppressLint("RecyclerView")
     @Override
     protected void onBindViewHolder(@NonNull MainAdapterVinod.myViewHolders holder, int position, @NonNull Event_Model model) {
+
+        //connecting local variables with database data using get method
         holder.Name.setText(model.getname());
         holder.Start.setText(model.getStart());
         holder.End.setText(model.getEnd());
         holder.Web.setText(model.getWeb());
         holder.Status.setText(model.getStatus());
 
-
-
+        //connecting Banner
         Glide.with(holder.img.getContext())
                 .load(model.getBanner())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
                 .circleCrop()
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);
+
+
+        //Remaining days Counter
         String[] date = Calendar.getInstance().getTime().toString().split(" ");
         String Day = date[2];
         String Month = date[1];
@@ -75,51 +81,51 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
         System.out.println("****" + eventDate[1]+"****");
         System.out.println("****" + Month +"****");
 
-       switch(Month){
-           case "Jan":
-               monthd = 1;
-               break;
-           case "Feb":
-               monthd = 2;
-               break;
-           case "Mar":
-               monthd = 3;
-               break;
-           case "Apr":
-               monthd = 4;
-               break;
-           case "May":
-               monthd = 5;
-               break;
-           case "Jun":
-               monthd = 6;
-               break;
-           case "Jul":
-               monthd = 7;
-               break;
-           case "Aug":
-               monthd = 8;
-               break;
-           case "Sep":
-               monthd = 9;
-               break;
-           case "Oct":
-               monthd = 10;
-               break;
-           case "Nov":
-               monthd = 11;
-               break;
-           case "Dec":
-               monthd = 12;
-               break;
-       }
+        switch(Month){
+            case "Jan":
+                monthd = 1;
+                break;
+            case "Feb":
+                monthd = 2;
+                break;
+            case "Mar":
+                monthd = 3;
+                break;
+            case "Apr":
+                monthd = 4;
+                break;
+            case "May":
+                monthd = 5;
+                break;
+            case "Jun":
+                monthd = 6;
+                break;
+            case "Jul":
+                monthd = 7;
+                break;
+            case "Aug":
+                monthd = 8;
+                break;
+            case "Sep":
+                monthd = 9;
+                break;
+            case "Oct":
+                monthd = 10;
+                break;
+            case "Nov":
+                monthd = 11;
+                break;
+            case "Dec":
+                monthd = 12;
+                break;
+        }
         System.out.println("*********" + monthd +"****");
 
         if(Integer.parseInt(Year) == Integer.parseInt(eventDate[2])){
             if(monthd == Integer.parseInt(eventDate[1])){
                 int temp = Integer.parseInt(eventDate[0]) - Integer.parseInt(Day);
 //                holder.Remaining.setText(String.valueOf(eventDate[1]));
-              holder.Remaining.setText(String.valueOf(temp));
+                holder.Remaining.setText(String.valueOf(temp));
                 //holder.Remaining.setText(String.valueOf(Integer.parseInt(eventDate[0]) -Integer.parseInt(Day)));
             }else if(monthd+1 == Integer.parseInt(eventDate[1])){
                 int temp = 30-Integer.parseInt(Day);
@@ -137,9 +143,16 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
             holder.Remaining.setText(String.valueOf(temp));
         }
 
+
+
+
+        //Edit Part
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
+
+                //Connecting update status popup
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
                         .setContentHolder(new ViewHolder(R.layout.activity_status_update_popup))
                         .setExpanded(true,1150)
@@ -149,11 +162,12 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
 
                 view = dialogPlus.getHolderView();
 
-                EditText Review = view.findViewById(R.id.txtNames123);
+                //Getting input from update popup
+                EditText Status = view.findViewById(R.id.txtNames123);
                 Button btnUpdate = view.findViewById(R.id.btnUpdates123);
 
-
-                Review.setText(model.getStatus());
+                //Set input with Model class
+                Status.setText(model.getStatus());
 
                 dialogPlus.show();
 
@@ -162,24 +176,27 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
                     @Override
                     public void onClick(View view) {
                         Map<String,Object> map = new HashMap<>();
-                        map.put("status",Review.getText().toString());
+                        map.put("status",Status.getText().toString());
 
 
+                        //Connecting firebase data base
                         FirebaseDatabase.getInstance().getReference().child("Event Management")
                                 .child(Objects.requireNonNull(getRef(position).getKey())).updateChildren(map)
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
+                                    //Successful toast
                                     public void onSuccess(Void unused) {
                                         //Toast.makeText(Review.getContext(),"Updated Successfully",Toast.LENGTH_SHORT).show();
-                                        Toast.makeText(Review.getContext(),"Update Successful!",Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Status.getContext(),"Update Successful!",Toast.LENGTH_SHORT).show();
 
                                         dialogPlus.dismiss();
                                     }
                                 })
                                 .addOnFailureListener(new OnFailureListener() {
                                     @Override
+                                    //Unsuccessful toast
                                     public void onFailure(Exception e) {
-                                        Toast.makeText(Review.getContext(),"Error While Updating",Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Status.getContext(),"Error While Updating",Toast.LENGTH_SHORT).show();
                                         dialogPlus.dismiss();
                                     }
                                 });
@@ -193,25 +210,29 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
         });
 
 
+        //Delete Part
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Alert box
                 AlertDialog.Builder builder = new AlertDialog.Builder(holder.Name.getContext());
                 builder.setTitle("Do you wish to proceed with deletion?");
                 builder.setMessage("Deletions cannot be reversed!");
 
+                //Delete
                 builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         FirebaseDatabase.getInstance().getReference().child("Event Management")
-                                .child(Objects.requireNonNull(getRef(position).getKey())).removeValue();
+                                .child(Objects.requireNonNull(getRef(position).getKey())).removeValue();  //removing item
                     }
                 });
 
+                //Cancel
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(holder.Name.getContext(),"Cancelled!",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(holder.Name.getContext(),"Cancelled!",Toast.LENGTH_SHORT).show();  //cancelling toast
                     }
                 });
 
@@ -223,10 +244,11 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
     }
 
 
-
+    //Retrieve part 2
     @NonNull
     @Override
     public MainAdapterVinod.myViewHolders onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        //Retrieve layout
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_vinod_retreive,parent,false);
 
         return new MainAdapterVinod.myViewHolders(view);
@@ -234,15 +256,23 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
 
     class myViewHolders extends RecyclerView.ViewHolder{
 
+        //banner image
         CircleImageView img;
+
+        //text views
         TextView Name,Start,End,Web,Status,Remaining;
 
+        //buttons
         Button btnEdit,btnDelete;
+
+
 
         public myViewHolders(@NonNull View itemView) {
             super(itemView);
 
-            Remaining = (TextView) itemView.findViewById(R.id.RemainingTxt546);
+
+            //connecting Retrieve layout components
+            Remaining = (TextView)itemView.findViewById(R.id.RemainingTxt546);
             img = (CircleImageView)itemView.findViewById(R.id.cham1vinod);
             Name = (TextView)itemView.findViewById(R.id.nametextvinod);
             Start = (TextView) itemView.findViewById(R.id.nametext2vinod);

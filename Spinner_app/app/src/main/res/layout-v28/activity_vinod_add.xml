@@ -45,7 +45,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
             android:fontFamily="sans-serif"
-            android:text="@string/Eestarting_date"
+            android:text="Starting Date"
             android:textColor="@color/browser_actions_title_color"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="sans-serif"
-            android:text="@string/EEending_date"
+            android:text="Ending Date"
             android:textColor="@color/browser_actions_title_color"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="sans-serif"
-            android:text="@string/web_link"
+            android:text="Web Link"
             android:textColor="@color/browser_actions_title_color"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="sans-serif"
-            android:text="@string/banner_link"
+            android:text="Banner Link"
             android:textColor="@color/browser_actions_title_color"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -114,8 +114,7 @@
             android:text=""
             android:textSize="20sp"
             android:textStyle="bold"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:importantForAutofill="no" />
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <!-- Edited input type-->
 
@@ -125,14 +124,13 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="sans-serif-light"
-            android:hint="@string/Edd_mm_yyyy"
+            android:hint="dd/mm/yyyy"
             android:inputType="date"
             android:minHeight="48dp"
             android:text=""
             android:textSize="20sp"
             android:textStyle="bold"
-            tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck,TextContrastCheck"
-            android:autofillHints="" />
+            tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
         <EditText
             android:id="@+id/id_3Vinod"
@@ -140,13 +138,12 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="sans-serif-light"
-            android:hint="@string/EEdd_mm_yyyy"
+            android:hint="dd/mm/yyyy"
             android:inputType="date"
             android:text=""
             android:textSize="20sp"
             android:textStyle="bold"
-            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck"
-            android:autofillHints="" />
+            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
 
         <EditText
             android:id="@+id/id_4Vinod"
@@ -158,8 +155,7 @@
             android:text=""
             android:textSize="20sp"
             android:textStyle="bold"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:importantForAutofill="no" />
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <!--Edited input type-->
 
@@ -176,8 +172,7 @@
             android:text=""
             android:textSize="20sp"
             android:textStyle="bold"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:importantForAutofill="no" />
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
             android:id="@+id/status123"
@@ -185,12 +180,12 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="sans-serif-light"
-            android:hint="@string/EEstatus"
             android:inputType="textWebEmailAddress"
+            android:hint="Status"
             android:textSize="20sp"
             android:textStyle="bold"
-            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck"
-            android:autofillHints="" />
+            tools:ignore="SpeakableTextPresentCheck"
+             />
 
         <!--  New  -->
 
@@ -232,7 +227,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_event_24"
         android:outlineAmbientShadowColor="#002afa"
-        tools:targetApi="p" />
+
+        />
 
     <EditText
         android:id="@+id/id_9999Vinod"
@@ -240,15 +236,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="@string/EEevent_id"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:text="Event ID"
         app:layout_constraintBottom_toTopOf="@+id/button_05Vinod"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/VinodlinearLayout"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

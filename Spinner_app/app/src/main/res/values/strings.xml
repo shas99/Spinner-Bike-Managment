@@ -170,6 +170,28 @@
     <string name="DataDate">20/11/2021</string>
     <string name="DataEdate">22/11/2021</string>
     <string name="dataDes">Comming soon!</string>
+    <string name="event">Event</string>
+    <string name="startTime">Start</string>
+    <string name="dashmark">-</string>
+    <string name="Remaining">testing</string>
+    <string name="Estatus">Status</string>
+    <string name="Edelete">Delete</string>
+    <string name="update_status">Update Status</string>
+    <string name="Emore_info">More Info</string>
+    <string name="Eend">End</string>
+    <string name="Ed_remainig">D Remainig</string>
+    <string name="E_100">100</string>
+    <string name="Eevent_name">Event Name</string>
+    <string name="Eevent_id">Event ID</string>
+    <string name="EEevent_id">Event ID</string>
+    <string name="EEstatus">Status</string>
+    <string name="Eestarting_date">Starting Date</string>
+    <string name="EEending_date">Ending Date</string>
+    <string name="web_link">Web Link</string>
+    <string name="banner_link">Banner Link</string>
+    <string name="Edd_mm_yyyy">dd/mm/yyyy</string>
+    <string name="EEdd_mm_yyyy">dd/mm/yyyy</string>
+    <string name="todo">TODO</string>
 
     <string-array name="bikes">
         <item>BMX Drift -  Price 12K</item>

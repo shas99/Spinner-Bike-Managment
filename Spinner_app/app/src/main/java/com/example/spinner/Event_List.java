@@ -30,9 +30,14 @@ public class Event_List extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Event list layout
         setContentView(R.layout.activity_event_list);
 
+        //floating action button in events main page
         floatingActionButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+
+        //Actions for floating button
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,10 +58,12 @@ public class Event_List extends AppCompatActivity {
 
     }
 
-        public void openNewActivity(){
+
+    //floating button action
+    public void openNewActivity(){
         Intent intent = new Intent(this, VinodAdd.class);
         startActivity(intent);
-        }
+    }
 
 
     @Override
@@ -70,6 +77,7 @@ public class Event_List extends AppCompatActivity {
         super.onStop();
         mainAdapterVinod.stopListening();
     }
+
 
 
 }
