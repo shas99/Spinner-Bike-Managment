@@ -31,7 +31,7 @@ public class Rent2 extends AppCompatActivity {
 
         String points = UserDetails.getPoints();
         TextView point = (TextView) findViewById(R.id.points55);
-        point.setText(points);
+        point.setText(points + "  ");
 
         radioGroup = findViewById(R.id.radioGroup2);
 

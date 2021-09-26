@@ -40,6 +40,7 @@ private String userID;
             public void onClick(View v) {
 
                 FirebaseAuth.getInstance().signOut();
+                Toast.makeText(UserProfileActivity.this, "Hope To See You Again , Bye !", Toast.LENGTH_LONG).show();
                 startActivity(new Intent(UserProfileActivity.this,MainActivity.class));
 
 
