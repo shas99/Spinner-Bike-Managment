@@ -16,7 +16,7 @@ public class Home extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //user details
+        //retreive user details
         String name = UserDetails.getName();
         String email = UserDetails.getEmail();
         String phone = UserDetails.getMobileNo();
@@ -55,7 +55,7 @@ public class Home extends AppCompatActivity {
         inflater.inflate(R.menu.example_menu,menu);
         return true;
     }
-
+//code for menu
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){

@@ -73,10 +73,10 @@ public class Weekly_target extends AppCompatActivity {
         setContentView(R.layout.activity_weekly_target);
         //notification channel creation method calling
 
-
+        //for use in target to recreate this activity
         self_intent=this;
 
-
+        //call notification channel
         CreateNotificatoinChannel();
         reference = FirebaseDatabase.getInstance().getReference("UsersProfile");
         referenceret = FirebaseDatabase.getInstance().getReference().child("UsersProfile");
@@ -123,7 +123,7 @@ public class Weekly_target extends AppCompatActivity {
 
         final ArrayList<String> list = new ArrayList<>();
 
-
+        //unwanted?
         referenceret.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -164,7 +164,8 @@ public class Weekly_target extends AppCompatActivity {
         });
 
 
-
+        //x is target
+        //timer calc to change time to milli seconds
 
         float f = Float.parseFloat(x);
         String p = String.valueOf(df2.format(f/60));
@@ -185,20 +186,20 @@ public class Weekly_target extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
+                //for testing button click
                 //timer
                 if(isStart == false){
                     isStart = true;
                 }else if(isStart == true){
                     isStart = false;
                 }
-
+                //for testing button click
                 TextView secret = (TextView) findViewById(R.id.secretText);
                 String num = secret.getText().toString();
                 System.out.println("Labadaba" + num+num);
                 int j = Integer.parseInt(num);
 
-
+               //to change the button to end when clicked if it's in start mode
                 if(j == 0){
                     secret.setText("1");
                     System.out.println("0");
@@ -208,7 +209,7 @@ public class Weekly_target extends AppCompatActivity {
                     Button button = (Button)findViewById(R.id.startbtn);
                     button.setText("END");
 
-
+                    //to change the button to end when clicked if it's in end mode
                 }else if(j == 1){
                     secret.setText("0");
                     System.out.println("Dubdub 1");
@@ -225,7 +226,7 @@ public class Weekly_target extends AppCompatActivity {
                     TextView bro = (TextView) findViewById(R.id.DDDD);
 
                     public void onTick(long millisUntilFinished) {
-
+                        //code for timer and calculation
                         if(isStart == true) {
 
                             bro.setText("Seconds Remaining:" + millisUntilFinished / 1000);
@@ -234,7 +235,7 @@ public class Weekly_target extends AppCompatActivity {
                             rem = (Integer.parseInt(UserDetails.getTarget())*1000 - sec * 1000) / 1000;
                             dum = String.valueOf(rem);
                             reference.child(UserDetails.ID()).child("Target").setValue(String.valueOf(millisUntilFinished / 1000));
-                            //counter++;
+                            //counter++; calc for pro and timer and count down time
                             counter =(int) ( timeleft / (totaltime*1000));
                             System.out.println("Counter is:" + counter);
                             prog();
@@ -247,7 +248,7 @@ public class Weekly_target extends AppCompatActivity {
 
 
 
-
+                    //after timer is ended
                     public void onFinish() {
 
                         //notification start
@@ -299,6 +300,7 @@ private void CreateNotificatoinChannel(){
 
 
     }
+    //progress bar
     public void prog(){
         pb = (ProgressBar) findViewById(R.id.progressBar);
 

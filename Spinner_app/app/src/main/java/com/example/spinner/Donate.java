@@ -23,7 +23,7 @@ public class Donate extends AppCompatActivity {
 
         reference = FirebaseDatabase.getInstance().getReference("UsersProfile");
 
-
+        //set points
         String points = UserDetails.getPoints();
 
         System.out.println(points);
@@ -33,7 +33,7 @@ public class Donate extends AppCompatActivity {
         System.out.println("ID is " + ID);
     }
 
-
+    //button click
    public void update_1(View view){
         if(Integer.parseInt(UserDetails.getPoints()) < 100){
             Toast.makeText(this, "You don't have enough points to donate :(", Toast.LENGTH_SHORT).show();
@@ -44,13 +44,14 @@ public class Donate extends AppCompatActivity {
 
 
     }
+    //if there were any changes in points
     private boolean isChaged(){
         String updated = UserDetails.getPoints();
         System.out.println("xxxbefore editing updated" + updated);
         int temp = Integer.parseInt(updated);
         System.out.println("xxxTemp is " + temp);
         if(true){
-
+            //reduces 100 points for each button click
             temp -= 100;
             System.out.println("xxxafter editing temp" + temp);
             updated = Integer.toString(temp);

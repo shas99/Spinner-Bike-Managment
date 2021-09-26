@@ -38,7 +38,7 @@ public class End_target extends AppCompatActivity {
 
         b1.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view){
+            public void onClick(View view){//go to weekly target
                 Intent i = new Intent(End_target.this, Weekly_target.class);
                 startActivity(i);
             }
@@ -49,7 +49,7 @@ public class End_target extends AppCompatActivity {
             @Override
             public void onClick(View view){
 
-
+                //algorithm to get the fee
 
                 String[] time = Help.getTime().split(":");
                 String[] date = Calendar.getInstance().getTime().toString().split(" ");
@@ -59,8 +59,16 @@ public class End_target extends AppCompatActivity {
                 if(Integer.parseInt(time[0]) == Integer.parseInt(currentTime[0])){
                     int timeinfloat = Integer.parseInt(currentTime[1]) - Integer.parseInt(time[1]);
                     double min = timeinfloat / 60.0;
-                    String toast = "Your total charge is " + String.valueOf(Double.parseDouble(Help.getPrice())*min)  + "rs, Please go to the counter to pay the fee";
+
+                    String toast = "Your total charge is " + String.format("%.2f",Double.parseDouble(Help.getPrice())*min)  + "rs, Please go to the counter to pay the fee";
                     System.out.println("++++" + currentTime[0] + "lll" + currentTime[1]+ "kkkk" + currentTime[2] + "1111");
+                    Toast.makeText(getApplicationContext(),toast,Toast.LENGTH_LONG).show();
+                }
+                else{//if start ride and end ride is not in the same hour
+                    int timeinfloat = Integer.parseInt(currentTime[1]) - Integer.parseInt(time[1]);
+                    int hoursinfloat = Integer.parseInt(currentTime[0]) - Integer.parseInt(time[0]);
+                    double min = (timeinfloat / 60.0)+hoursinfloat * Integer.parseInt(Help.getPrice());
+                    String toast = "Your total charge is " + String.format("%.2f",Double.parseDouble(Help.getPrice())*min)  + "rs, Please go to the counter to pay the fee";
                     Toast.makeText(getApplicationContext(),toast,Toast.LENGTH_LONG).show();
                 }
                 System.out.println("+++" + date[3]);

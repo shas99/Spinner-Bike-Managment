@@ -27,7 +27,10 @@ public class Rent3 extends AppCompatActivity {
         setContentView(R.layout.activity_rent3);
 
         Button b1=(Button)findViewById(R.id.StartRidingbtn);
-        //
+
+
+        //algorithm to get the date
+
         String[] date = Calendar.getInstance().getTime().toString().split(" ");
 
         AcceptRide A = new AcceptRide(BikeType.getPremium(),BikeType.getSize(),date[3],date[2] + "/" + date[1] + "/" + date[5]);
@@ -39,7 +42,7 @@ public class Rent3 extends AppCompatActivity {
         TextView Size = (TextView) findViewById(R.id.SizetxtView);
         Size.setText(BikeType.getSize());
 
-
+        //algorithm to calculate fee
         String price = "100";
         float temp = 0;
 
@@ -52,7 +55,7 @@ public class Rent3 extends AppCompatActivity {
 
         System.out.println("789" + d);
 
-
+        //choosen size
         switch(d) {
             case "Small":
                 price = "100";
@@ -71,7 +74,7 @@ public class Rent3 extends AppCompatActivity {
 
         System.out.println("***" + AcceptRide.getPremium() + "***");
 
-
+        //if premium choosen
         if(AcceptRide.getPremium() == true){
 
             temp = Integer.parseInt(price);
@@ -81,9 +84,18 @@ public class Rent3 extends AppCompatActivity {
             temp = Integer.parseInt(price);
 
         }
+        //discounts based on loyality
+        if(Rent2.loyal == 1){
+            temp *= 0.95;
+        }else if(Rent2.loyal == 2){
+            temp *= 0.8;
+        }else if(Rent2.loyal == 3){
+            temp *= 0.7;
+        }
         price = String.valueOf(temp);
-        gg = price;
 
+        gg = price;
+        //rendering the details
         TextView Price = (TextView) findViewById(R.id.PriceTxtview);
         Price.setText(price);
 
@@ -106,7 +118,7 @@ public class Rent3 extends AppCompatActivity {
 
 
 
-
+        //saving these details for future use(to calculate end fee)
         b1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
