@@ -45,6 +45,7 @@ public class MainAdapterChamath extends FirebaseRecyclerAdapter <BikeRetreiveMai
 
     @Override
     protected void onBindViewHolder(@NonNull myViewHolders holder, @SuppressLint("RecyclerView") int position, @NonNull BikeRetreiveMainModel model) {
+        //Local variables are connected with the database
         holder.Brand.setText(model.getBrand());
         holder.Name.setText(model.getName());
         holder.Origin.setText(model.getOrigin());
@@ -52,7 +53,7 @@ public class MainAdapterChamath extends FirebaseRecyclerAdapter <BikeRetreiveMai
 
 
 
-
+        //Glide dependency image connection
         Glide.with(holder.img.getContext())
                 .load(model.getImage())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
@@ -60,6 +61,7 @@ public class MainAdapterChamath extends FirebaseRecyclerAdapter <BikeRetreiveMai
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);
 
+        //Calculations
         String[] date = Calendar.getInstance().getTime().toString().split(" ");
         String Day = date[2];
         String Month = date[1];
@@ -129,10 +131,11 @@ public class MainAdapterChamath extends FirebaseRecyclerAdapter <BikeRetreiveMai
 
 
 
-
+        // Update
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Initializing the update popup
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
                         .setContentHolder(new ViewHolder(R.layout.activity_updates_popups))
                         .setExpanded(true,1150)
@@ -141,11 +144,11 @@ public class MainAdapterChamath extends FirebaseRecyclerAdapter <BikeRetreiveMai
                 //dialogPlus.show();
 
                 view = dialogPlus.getHolderView();
-
+                // Inputs are obtained from the popup for editing
                 EditText Review = view.findViewById(R.id.txtNames);
                 Button btnUpdate = view.findViewById(R.id.btnUpdates);
 
-
+                //Setting the inputs utilizing the model class
                 Review.setText(model.getReview());
 
                 dialogPlus.show();
@@ -183,6 +186,7 @@ public class MainAdapterChamath extends FirebaseRecyclerAdapter <BikeRetreiveMai
             }
         });
 
+        //Delete
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -219,13 +223,13 @@ public class MainAdapterChamath extends FirebaseRecyclerAdapter <BikeRetreiveMai
     }
 
     static class myViewHolders extends RecyclerView.ViewHolder{
-
+        //Images and text views
         CircleImageView img;
         TextView Brand,Name,Origin,Review,Return;
-
+        //Buttons
         Button btnEdit,btnDelete;
 
-
+        //Connection of the respective UI layout components
         public myViewHolders(@NonNull View itemView) {
             super(itemView);
             img = (CircleImageView)itemView.findViewById(R.id.cham1);

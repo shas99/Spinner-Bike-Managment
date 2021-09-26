@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/nametext"
-            android:text="Brand"
+            android:text="@string/brand12345"
             android:textStyle="bold"
             android:textSize="25sp"
             android:textColor="#000"
@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/nametext2"
-            android:text="Name"
+            android:text="@string/name12345"
             android:textSize="20sp"
             android:textColor="#000"
             android:layout_toRightOf="@+id/cham1"
@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/nametext3"
-            android:text="Origin"
+            android:text="@string/origin12345"
             android:textSize="20sp"
             android:textStyle="italic"
             android:textColor="#000"
@@ -64,7 +64,7 @@
             android:id="@+id/textLease"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Return Date"
+            android:text="@string/return_date12345"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#000"
@@ -85,7 +85,7 @@
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
-                android:text="Cycler Opinion"
+                android:text="@string/cycler_opinion12345"
                 android:textAllCaps="false"
                 android:layout_marginTop="30dp"/>
 
@@ -94,7 +94,7 @@
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:text="Remove Bicycle"
+                android:text="@string/remove_bicycle12345"
                 android:textAllCaps="false"
                 android:layout_marginTop="30dp"/>
 
