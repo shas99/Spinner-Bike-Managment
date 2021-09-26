@@ -171,6 +171,49 @@
     <string name="DataEdate">22/11/2021</string>
     <string name="dataDes">Comming soon!</string>
 
+
+    <string name="enter_email">Enter Email :</string>
+    <string name="enter_password">Enter Password:</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="create_account">Create Account</string>
+    <string name="loginpic">LoginPic1</string>
+    <string name="order_a_bike1">Order A bike</string>
+    <string name="log_out">Log out</string>
+    <string name="mytasks1">myTasks</string>
+    <string name="todo2">TODO</string>
+    <string name="todoxs">TODOxs</string>
+    <string name="enter_your_email1">Enter Your email</string>
+    <string name="enter_your_name2">Enter Your name</string>
+    <string name="enter_your_phone_no">Enter your phone no :</string>
+    <string name="update_details1">Update Details</string>
+    <string name="order_a_bike4">Order a Bike</string>
+    <string name="enter_your_nic">Enter your NIC :</string>
+    <string name="calculate_cost">Calculate Cost</string>
+    <string name="enter_your_cycler_id4">Enter your Cycler ID :</string>
+    <string name="enter_your_mobiile_no">Enter your mobiile No :</string>
+    <string name="pick_your_bicycle">Pick your Bicycle :</string>
+    <string name="see_our_collections">See our collections</string>
+    <string name="jajaj">jajaj</string>
+    <string name="topic">Topic</string>
+    <string name="save_task6">Save Task</string>
+    <string name="show_my_tasks4">Show My Tasks</string>
+    <string name="create_my_task">Create My Task</string>
+    <string name="enter_description">Enter description</string>
+    <string name="my_tasks1">My Tasks</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="good_day_to_ride">Good Day To Ride</string>
+    <string name="_21_c">21 C</string>
+    <string name="wed">Wed</string>
+    <string name="sun">Sun</string>
+    <string name="thu">Thu</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="enter_offer_discount">Enter Offer Discount:</string>
+    <string name="enter_bike_price">Enter Bike Price :</string>
+    <string name="enter_spinner_points">Enter Spinner Points :</string>
+    <string name="shipping_cost_500rs_included">Shipping Cost : 500Rs included</string>
+    <string name="calculate">Calculate</string>
+    <string name="estimated_cost">Estimated Cost :</string>
+
     <string-array name="bikes">
         <item>BMX Drift -  Price 12K</item>
         <item>TomaHawk Xander - Price 34K</item>
