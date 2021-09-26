@@ -21,18 +21,14 @@ import android.os.Vibrator;
 @RequiresApi(api = Build.VERSION_CODES.M)
 public class OrderBikeActivity extends AppCompatActivity {
 
+    //Init Assets
     private EditText cyclerID,mobileNo,NIC;
     private EditText bicycleType;
     private FirebaseDatabase database;
     private Button orderBikeBtn;
     BikeOrder order1;
     private TextView collections,promoCalculate;
-
     private DatabaseReference myRef;
-
-
-
-
 
 
 
@@ -44,9 +40,9 @@ public class OrderBikeActivity extends AppCompatActivity {
 
 
 
-
-        promoCalculate=(TextView)findViewById(R.id.promoCalc);
-        collections=(TextView)findViewById(R.id.collections);
+        //Layouts hooks
+            promoCalculate=(TextView)findViewById(R.id.promoCalc);
+            collections=(TextView)findViewById(R.id.collections);
             cyclerID =(EditText)findViewById(R.id.cyclerIDInput);
             mobileNo =(EditText) findViewById(R.id.editTextPhone);
             bicycleType= (EditText) findViewById(R.id.bikesDropDown);
@@ -54,11 +50,13 @@ public class OrderBikeActivity extends AppCompatActivity {
             orderBikeBtn=(Button)findViewById(R.id.myTasks);
             order1 =new BikeOrder();
             myRef=FirebaseDatabase.getInstance().getReference().child("Bike Order Details");
-        final MediaPlayer mp2 = MediaPlayer.create(this, R.raw.success);
+
+            //MediaPlay instatiate
+            final MediaPlayer mp2 = MediaPlayer.create(this, R.raw.success);
 
 
 
-
+        //Handle button order()
         orderBikeBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -71,7 +69,7 @@ public class OrderBikeActivity extends AppCompatActivity {
                     String bicycleRef = bicycleType.getText().toString().trim();
 
 
-
+                    //Validation form
                     if(cyclerid.isEmpty()){
                         cyclerID.setError("Email is required");
                         cyclerID.requestFocus();
@@ -103,69 +101,38 @@ public class OrderBikeActivity extends AppCompatActivity {
                     }
 
 
-
-
-
-
-
-
+                    //Set Values to object capsule
                     order1.setCyclerID(cyclerid);
                     order1.setMobileNo(mobilenumber);
                     order1.setNIC(nic);
                     order1.setBicycleType(bicycleRef);
 
-
+                    //Push capsule to firebase
                     myRef.push().setValue(order1);
                     Toast.makeText(OrderBikeActivity.this, "Successfully Ordered", Toast.LENGTH_SHORT).show();
                     mp2.start();
                     Intent intent = new Intent(OrderBikeActivity.this, UserProfileActivity.class);
                     startActivity(intent);
-
-
-
-
-
-
                 }
             });
+
+        //Handle function -> viewCollections
         collections.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent intent = new Intent(OrderBikeActivity.this, Add_A_Bicycle.class);
                 startActivity(intent);
-
-
-
-
-
-
             }
         });
-
+        //Handle function promoCalc
         promoCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(OrderBikeActivity.this,CalculatePrice.class);
                 startActivity(intent);
-
-
-
-
-
-
             }
         });
-
-
-
-
-
-
-        
-
-        
     }
 
 

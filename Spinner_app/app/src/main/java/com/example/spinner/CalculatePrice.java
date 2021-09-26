@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class CalculatePrice extends AppCompatActivity {
 
+    //Init Assets
     TextView esitmatedCost;
     EditText priceInput,discountInput,pointsInput;
     Button calculate;
@@ -21,14 +22,13 @@ public class CalculatePrice extends AppCompatActivity {
         setContentView(R.layout.activity_calculate_price);
 
         //Hooks
-
         esitmatedCost=(TextView) findViewById(R.id.esitimatedCost);
         priceInput=(EditText) findViewById(R.id.priceInput);
         discountInput=(EditText) findViewById(R.id.discountInput);
         pointsInput=(EditText) findViewById(R.id.pointsInput);
         calculate=(Button) findViewById(R.id.calculate);
 
-
+        //Handle function -> calculateCost()
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +41,5 @@ public class CalculatePrice extends AppCompatActivity {
 
             }
         });
-
-
     }
 }

@@ -7,6 +7,9 @@ public class CreateTest {
     String Review;
     String id5;
     String Image;
+    String Lease;
+    String Day;
+    String Year;
 
 
     public CreateTest(){
@@ -15,17 +18,42 @@ public class CreateTest {
 
 
 
-    public CreateTest(String Brand, String Name, String Origin, String Review, String ID,String Image) {
+    public CreateTest(String Brand, String Name, String Origin, String Review, String ID,String Image, String Lease, String Day, String Year) {
         this.Brand = Brand;
         this.Name = Name;
         this.Origin = Origin;
         this.Review = Review;
         this.Image = Image;
         id5 = ID;
+        this.Lease = Lease;
+        this.Day = Day;
+        this.Year = Year;
 
     }
 
+    public String getYear() {
+        return Year;
+    }
 
+    public void setYear(String year) {
+        Year = year;
+    }
+
+    public String getDay() {
+        return Day;
+    }
+
+    public void setDay(String day) {
+        Day = day;
+    }
+
+    public String getLease() {
+        return Lease;
+    }
+
+    public void setLease(String lease) {
+        Lease = lease;
+    }
 
     public String getBrand() {
         return Brand;

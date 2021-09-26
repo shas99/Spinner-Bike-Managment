@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Calendar;
+
 public class Bicycle_List extends AppCompatActivity {
 FirebaseDatabase rootNode;
 DatabaseReference reference;
@@ -72,10 +74,22 @@ DatabaseReference reference;
 
 
 
+                EditText Lease = findViewById(R.id.id_lease);
+
+
+                String test7 = Lease.getText().toString();
+
+
+
                 EditText id5 = findViewById(R.id.id_9999);
 
 
                 String test5 = id5.getText().toString();
+
+                String[] date = Calendar.getInstance().getTime().toString().split(" ");
+                String Day = date[2];
+                String Year = date[5];
+
 
 
                 if(test1.isEmpty()){
@@ -114,6 +128,12 @@ DatabaseReference reference;
                     return;
                 }
 
+                if(Integer.parseInt(test7) > 12){
+                    Lease.setError("The Number Of Months Cannot Exceed 12!");
+                    Lease.requestFocus();
+                    return;
+                }
+
 
                 Toast.makeText(Bicycle_List.this, "A New Bicycle Has Been Added To The Inventory!", Toast.LENGTH_SHORT).show();
 
@@ -123,7 +143,7 @@ DatabaseReference reference;
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("Bicycle Management");
 
-                CreateTest obj = new CreateTest(test1,test2,test3,test4,test5,test6);
+                CreateTest obj = new CreateTest(test1,test2,test3,test4,test5,test6,test7,Day,Year);
 
                 reference.child(test5).setValue(obj);
 

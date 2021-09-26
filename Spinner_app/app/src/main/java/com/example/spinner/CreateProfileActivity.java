@@ -26,38 +26,35 @@ import java.util.regex.Pattern;
 
 public class CreateProfileActivity extends AppCompatActivity implements View.OnClickListener {
 
+    //Init Assets
     private TextView emailBanner;
     private Button registerUser;
-
     private EditText emailInput,nameInput,passwordInput,sexInput,mobileNumberInput;
-
     private static final int CAMERA_REQUEST =1888;
     ImageView imageView;
-
-
     private FirebaseAuth mAuth;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_createprofile);
         mAuth = FirebaseAuth.getInstance();
 
-emailBanner =(TextView) findViewById(R.id.emailBanner);
-emailBanner.setOnClickListener(this);
+        //Layouts hooks
+        emailBanner =(TextView) findViewById(R.id.emailBanner);
+        emailBanner.setOnClickListener(this);
+        registerUser =(Button)findViewById(R.id.registerUser);
+        registerUser.setOnClickListener(this);
+        emailInput =(EditText) findViewById(R.id.emailInput);
+        nameInput=(EditText) findViewById(R.id.nameInput);
+        passwordInput=(EditText) findViewById(R.id.passwordInput);
+        sexInput=(EditText) findViewById(R.id.sexInput);
+        mobileNumberInput=(EditText)findViewById(R.id.mobileNumberInput);
 
+        imageView =(ImageView) findViewById(R.id.camerPic);
+        Button photoButton =(Button) findViewById(R.id.uploadBtn);
 
-registerUser =(Button)findViewById(R.id.registerUser);
-registerUser.setOnClickListener(this);
-
-emailInput =(EditText) findViewById(R.id.emailInput);
-nameInput=(EditText) findViewById(R.id.nameInput);
-passwordInput=(EditText) findViewById(R.id.passwordInput);
-sexInput=(EditText) findViewById(R.id.sexInput);
-mobileNumberInput=(EditText)findViewById(R.id.mobileNumberInput);
-
-imageView =(ImageView) findViewById(R.id.camerPic);
-Button photoButton =(Button) findViewById(R.id.uploadBtn);
-
+        //Handle function -> upload()
 photoButton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
@@ -67,11 +64,10 @@ photoButton.setOnClickListener(new View.OnClickListener() {
 });
 
 
+    }//End of onCreate()
 
 
-    }
-
-
+    //Set Picture
     @Override
     protected void onActivityResult(int requestCode, int resultCode,Intent data) {
 
@@ -82,6 +78,7 @@ photoButton.setOnClickListener(new View.OnClickListener() {
         }
     }
 
+    //Handle onclick -> registerUser()
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -92,6 +89,7 @@ photoButton.setOnClickListener(new View.OnClickListener() {
 
     }
 
+    //Handle function -> register()
     private void registerUser() {
         String email =emailInput.getText().toString().trim();
         String name =nameInput.getText().toString().trim();
@@ -99,7 +97,7 @@ photoButton.setOnClickListener(new View.OnClickListener() {
         String sex =sexInput.getText().toString().trim();
         String mobileNo =mobileNumberInput.getText().toString().trim();
 
-
+        //Validate user fields
         if(name.isEmpty()){
             nameInput.setError("Name is required");
             nameInput.requestFocus();
@@ -124,7 +122,7 @@ photoButton.setOnClickListener(new View.OnClickListener() {
             return;
         }
 
-
+        //Auth with create email
         mAuth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
