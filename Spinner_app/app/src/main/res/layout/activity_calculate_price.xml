@@ -7,10 +7,11 @@
     tools:context=".CalculatePrice">
 
     <TextView
+        android:labelFor="@+id/bikePrice"
         android:id="@+id/bikePrice2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter Offer Discount:"
+        android:text="@string/enter_offer_discount"
         android:textColor="#050505"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,48 +24,52 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
 
-        android:orientation="horizontal">
+        android:layout_marginBottom="65dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/priceInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="160dp"
-        android:layout_height="120dp"
-        android:layout_weight="1"
-        app:cardCornerRadius="5dp"
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="5dp"
 
-        app:cardElevation="2dp">
+            app:cardElevation="2dp">
 
-        <RelativeLayout
-            android:id="@+id/myProfile"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#009ffd"
-            android:padding="8dp"
-            android:shadowRadius="50" >
+            <RelativeLayout
+                android:id="@+id/myProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#009ffd"
+                android:padding="8dp"
+                android:shadowRadius="50">
 
-            <TextView
-                android:id="@+id/bikePrice4"
-                android:layout_width="193dp"
-                android:layout_height="85dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="22dp"
-                android:layout_marginEnd="188dp"
-                android:layout_marginBottom="27dp"
-                android:text="Estimated Cost :"
-                android:textColor="#050505"
-                android:textSize="24sp" />
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/bikePrice4"
+                    android:layout_width="193dp"
+                    android:layout_height="85dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="188dp"
+                    android:layout_marginBottom="27dp"
+                    android:text="@string/estimated_cost"
+                    android:textColor="#050505"
+                    android:textSize="24sp" />
+            </RelativeLayout>
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
     <TextView
         android:id="@+id/BikePrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter Bike Price : "
+        android:text="@string/enter_bike_price"
         android:textColor="#050505"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -78,7 +83,7 @@
         android:id="@+id/bikePrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter Spinner Points :"
+        android:text="@string/enter_spinner_points"
         android:textColor="#050505"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -106,8 +111,7 @@
         android:id="@+id/bikePrice3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableRight="@drawable/ic_baseline_local_shipping_24"
-        android:text="Shipping Cost : 500Rs included   "
+        android:text="@string/shipping_cost_500rs_included"
         android:textColor="#050505"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -115,7 +119,8 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.796" />
+        app:layout_constraintVertical_bias="0.796"
+        app:drawableRightCompat="@drawable/ic_baseline_local_shipping_24" />
 
     <EditText
         android:id="@+id/priceInput"
@@ -123,12 +128,15 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.333"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/discountInput"
@@ -141,7 +149,9 @@
         app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.462" />
+        app:layout_constraintVertical_bias="0.462"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/pointsInput"
@@ -154,19 +164,21 @@
         app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.648" />
+        app:layout_constraintVertical_bias="0.648"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/calculate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Calculate"
+        android:text="@string/calculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:drawableRight="@drawable/ic_baseline_calculate_24"
+        android:drawableEnd="@drawable/ic_baseline_calculate_24"
         app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

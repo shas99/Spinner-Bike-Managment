@@ -21,48 +21,51 @@ import java.util.List;
 
 public class ShowActivity extends AppCompatActivity {
 
+    //Init Assets
     private RecyclerView recyclerView;
     private FirebaseFirestore db;
     private MyAdapter adapter;
     private List<Model> list;
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+@Override
+protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show);
 
         recyclerView =findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         db =FirebaseFirestore.getInstance();
         list =new ArrayList<>();
+        //Adapter instance for Update Data Delete Data OPS
         adapter=new MyAdapter(this,list);
         recyclerView.setAdapter(adapter);
 
+        //ItemTouch Helper API fix ----version 2.3.21
         ItemTouchHelper touchHelper = new ItemTouchHelper(new TouchHelper(adapter));
         touchHelper.attachToRecyclerView(recyclerView);
+        //Show My Tasks
         showData();
 
 
 
     }
-    public void showData(){
+//Handle function -> showData()
+public void showData(){
         db.collection("User Feedback").get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                                           @Override
-                                           public void onComplete(@NonNull  Task<QuerySnapshot> task) {
-                                               list.clear();
-                                               for (DocumentSnapshot snapshot : task.getResult()){
-                                                   Model model =new Model(snapshot.getString("id"),snapshot.getString("name"),snapshot.getString("desc"));
-                                                   list.add(model);
-                                               }
-                                               adapter.notifyDataSetChanged();
+                    @Override
+                    public void onComplete(@NonNull  Task<QuerySnapshot> task) {
+                        list.clear();
+                        for (DocumentSnapshot snapshot : task.getResult()){
+                            Model model =new Model(snapshot.getString("id"),snapshot.getString("name"),snapshot.getString("desc"));
+                            list.add(model);
+                        }
+                        adapter.notifyDataSetChanged();
 
-                                           }
-
-                                       }
+                    }
+                }
                 ).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull  Exception e) {

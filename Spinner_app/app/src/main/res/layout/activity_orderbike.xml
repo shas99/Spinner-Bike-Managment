@@ -11,7 +11,7 @@
         android:id="@+id/textView19"
         android:layout_width="237dp"
         android:layout_height="54dp"
-        android:text="Order a Bike"
+        android:text="@string/order_a_bike4"
         android:textColor="#000000"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -32,15 +32,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.005"
-        app:srcCompat="@drawable/bike" />
+        app:srcCompat="@drawable/bike"
+        android:contentDescription="@string/jajaj" />
 
     <TextView
+        android:labelFor="@+id/cyclerIDInput"
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter your Cycler ID :"
+        android:text="@string/enter_your_cycler_id4"
         android:textColor="#201B1B"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.065"
@@ -49,11 +51,13 @@
         app:layout_constraintVertical_bias="0.217" />
 
     <EditText
+
         android:id="@+id/cyclerIDInput"
         android:layout_width="217dp"
         android:layout_height="47dp"
+        android:drawableStart="@drawable/cyclerid"
         android:ems="10"
-        android:drawableLeft="@drawable/cyclerid"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textColor="#0E0C0C"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,15 +65,16 @@
         app:layout_constraintHorizontal_bias="0.783"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.271" />
+        app:layout_constraintVertical_bias="0.271"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter your mobiile No :"
+        android:text="@string/enter_your_mobiile_no"
         android:textColor="#151313"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.056"
@@ -78,10 +83,11 @@
         app:layout_constraintVertical_bias="0.379" />
 
     <EditText
+
         android:id="@+id/editTextPhone"
         android:layout_width="212dp"
         android:layout_height="58dp"
-        android:drawableLeft="@drawable/telephone2"
+        android:drawableStart="@drawable/telephone2"
 
         android:ems="10"
         android:inputType="phone"
@@ -91,15 +97,17 @@
         app:layout_constraintHorizontal_bias="0.763"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.464" />
+        app:layout_constraintVertical_bias="0.464"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pick your Bicycle :"
+        android:text="@string/pick_your_bicycle"
         android:textColor="#191717"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.059"
@@ -117,14 +125,15 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TextContrastCheck" />
 
 
     <TextView
         android:id="@+id/NICinput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter your NIC :"
+        android:text="@string/enter_your_nic"
         android:textColor="#040303"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -136,8 +145,8 @@
     <EditText
         android:id="@+id/nicInput"
         android:layout_width="228dp"
-        android:layout_height="41dp"
-        android:drawableLeft="@drawable/nic"
+        android:layout_height="48dp"
+        android:drawableStart="@drawable/nic"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="#050505"
@@ -147,38 +156,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.834"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/bikesDropDown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:drawableStart="@drawable/cycleorder"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="#050505"
-        android:drawableLeft="@drawable/cycleorder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView22"
         app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
-        app:layout_constraintVertical_bias="0.218" />
+        app:layout_constraintVertical_bias="0.218"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/collections"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="seeOurCollections"
-        android:text="See our collections"
+        android:minHeight="48dp"
 
+        android:text="@string/see_our_collections"
         android:textColor="#5E8DE1"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintHorizontal_bias="0.61"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.707" />
+        app:layout_constraintVertical_bias="0.745"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/promoCalc"
@@ -186,9 +199,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="157dp"
         android:layout_marginEnd="196dp"
-        android:text="Calculate Cost"
+        android:text="@string/calculate_cost"
         android:textColor="#020202"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
