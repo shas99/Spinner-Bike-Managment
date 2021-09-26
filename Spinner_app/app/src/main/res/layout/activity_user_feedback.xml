@@ -10,10 +10,10 @@
     <EditText
         android:id="@+id/edit_name"
         android:layout_width="320dp"
-        android:layout_height="38dp"
+        android:layout_height="48dp"
         android:background="@color/white"
         android:ems="10"
-        android:hint="   Topic"
+        android:hint="@string/topic"
         android:inputType="textPersonName"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,7 +21,9 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.159" />
+        app:layout_constraintVertical_bias="0.159"
+        tools:ignore="TextContrastCheck,TextContrastCheck"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/edit_desc"
@@ -29,36 +31,40 @@
         android:layout_height="280dp"
         android:layout_marginHorizontal="15dp"
         android:layout_marginTop="32dp"
+        android:background="@color/white"
         android:ems="10"
         android:gravity="start"
-        android:hint="Enter description"
-        android:background="@color/white"
+        android:hint="@string/enter_description"
+
         android:inputType="textMultiLine"
         android:padding="10dp"
-        android:shadowColor="@color/black"
 
+        android:shadowColor="@color/black"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_name"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck"
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/savebtn"
         android:layout_width="369dp"
         android:layout_height="72dp"
         android:layout_marginHorizontal="20dp"
-        android:drawableRight="@drawable/ic_baseline_add_24"
-        android:text="Save Task"
+        android:drawableEnd="@drawable/ic_baseline_add_24"
+        android:text="@string/save_task6"
         app:layout_constraintBottom_toBottomOf="@+id/showBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.869" />
+        app:layout_constraintVertical_bias="0.869"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
 
     <Button
         android:id="@+id/showBtn"
@@ -67,8 +73,8 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="63dp"
         android:backgroundTint=" #3CB371"
-        android:drawableRight="@drawable/ic_baseline_emoji_people_24"
-        android:text="Show My Tasks"
+        android:drawableEnd="@drawable/ic_baseline_emoji_people_24"
+        android:text="@string/show_my_tasks4"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,10 +86,10 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:text="Create My Task"
+        android:layout_marginStart="50dp"
+        android:text="@string/create_my_task"
         android:textColor="@color/black"
-        android:textSize="40dp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.326"
