@@ -29,6 +29,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -54,14 +55,87 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
         holder.Web.setText(model.getWeb());
         holder.Status.setText(model.getStatus());
 
+
+
         Glide.with(holder.img.getContext())
                 .load(model.getBanner())
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
                 .circleCrop()
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);
+        String[] date = Calendar.getInstance().getTime().toString().split(" ");
+        String Day = date[2];
+        String Month = date[1];
+        String Year = date[5];
+        String[] eventDate = holder.Start.getText().toString().split("/");
+        int howlong = 0;
+        int monthd =0;
 
 
+        System.out.println("****" + eventDate[1]+"****");
+        System.out.println("****" + Month +"****");
+
+       switch(Month){
+           case "Jan":
+               monthd = 1;
+               break;
+           case "Feb":
+               monthd = 2;
+               break;
+           case "Mar":
+               monthd = 3;
+               break;
+           case "Apr":
+               monthd = 4;
+               break;
+           case "May":
+               monthd = 5;
+               break;
+           case "Jun":
+               monthd = 6;
+               break;
+           case "Jul":
+               monthd = 7;
+               break;
+           case "Aug":
+               monthd = 8;
+               break;
+           case "Sep":
+               monthd = 9;
+               break;
+           case "Oct":
+               monthd = 10;
+               break;
+           case "Nov":
+               monthd = 11;
+               break;
+           case "Dec":
+               monthd = 12;
+               break;
+       }
+        System.out.println("*********" + monthd +"****");
+
+        if(Integer.parseInt(Year) == Integer.parseInt(eventDate[2])){
+            if(monthd == Integer.parseInt(eventDate[1])){
+                int temp = Integer.parseInt(eventDate[0]) - Integer.parseInt(Day);
+//                holder.Remaining.setText(String.valueOf(eventDate[1]));
+              holder.Remaining.setText(String.valueOf(temp));
+                //holder.Remaining.setText(String.valueOf(Integer.parseInt(eventDate[0]) -Integer.parseInt(Day)));
+            }else if(monthd+1 == Integer.parseInt(eventDate[1])){
+                int temp = 30-Integer.parseInt(Day);
+                temp = temp + Integer.parseInt(eventDate[0]);
+                holder.Remaining.setText(String.valueOf(temp));
+            }else{
+                int temp = Integer.parseInt(eventDate[1]) - monthd * 30;
+                temp += Integer.parseInt(eventDate[0]);
+                holder.Remaining.setText(String.valueOf(temp));
+            }
+
+        }else if(Integer.parseInt(Year)+1 == Integer.parseInt(eventDate[2])){
+            int temp =(30-Integer.parseInt(Day))+(12 - monthd)*30 + (Integer.parseInt(eventDate[1])-1)*30 +Integer.parseInt(eventDate[0]);
+            System.out.println("******************"+Integer.parseInt(String.valueOf(30-Integer.parseInt(Day))));
+            holder.Remaining.setText(String.valueOf(temp));
+        }
 
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -161,12 +235,14 @@ public class MainAdapterVinod extends FirebaseRecyclerAdapter<Event_Model,MainAd
     class myViewHolders extends RecyclerView.ViewHolder{
 
         CircleImageView img;
-        TextView Name,Start,End,Web,Status;
+        TextView Name,Start,End,Web,Status,Remaining;
 
         Button btnEdit,btnDelete;
 
         public myViewHolders(@NonNull View itemView) {
             super(itemView);
+
+            Remaining = (TextView) itemView.findViewById(R.id.RemainingTxt546);
             img = (CircleImageView)itemView.findViewById(R.id.cham1vinod);
             Name = (TextView)itemView.findViewById(R.id.nametextvinod);
             Start = (TextView) itemView.findViewById(R.id.nametext2vinod);
