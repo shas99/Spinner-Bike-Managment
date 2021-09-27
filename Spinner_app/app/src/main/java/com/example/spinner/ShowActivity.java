@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,6 +29,7 @@ public class ShowActivity extends AppCompatActivity {
     private FirebaseFirestore db;
     private MyAdapter adapter;
     private List<Model> list;
+
 
 
 @Override
@@ -48,9 +52,8 @@ protected void onCreate(Bundle savedInstanceState) {
         //Show My Tasks
         showData();
 
-
-
     }
+
 //Handle function -> showData()
 public void showData(){
         db.collection("User Feedback").get()

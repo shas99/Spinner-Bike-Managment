@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">      Spinner </string>
+    <string name="app_name">     Spinner </string>
     <string name="LoginBtn">Login</string>
     <string name="LoginText">Lets Get Started !</string>
     <string name="Emailtxt">Enter Email</string>
@@ -28,13 +28,10 @@
     <string name="deleteOrder">Delete</string>
     <string name="creditCard">Credit Card</string>
     <string name="LoginMainGreeting">Spinner</string>
-
     <string name="action_settings">Settings</string>
     <string name="full_price">Full Price</string>
     <string name="discount_amount">Discount</string>
     <string name="price_with_discount">Price with Discount</string>
-
-
     <string name="Welcome">Welcome</string>
     <string name="btnRent">RENT</string>
     <string name="btnDonate">Donate</string>
@@ -73,7 +70,6 @@
     <string name="orderDateView" />
     <string name="OrderDateView">01/05/2022</string>
     <string name="largebiketxt">Large</string>
-
     <string name="ADD">ADD A BICYCLE</string>
     <string name="SPIN">BIKES AT SPINNER</string>
     <string name="UPDATE">SPINNER BICYCLE REVIEW</string>
@@ -136,7 +132,6 @@
     <string name="txt_tyre">Tubeless Conversion</string>
     <string name="image_vvv">image_vvv</string>
     <string name="ok_button_id">OK</string>
-
     <string name="spinner_open_tout_2021">Spinner Open Tour 2021</string>
     <string name="txtfranceTour">France Tour 2021</string>
     <string name="captE2">France Tour 2021</string>
@@ -147,8 +142,6 @@
     <string name="Date2">08/21/2021 to 08/28/2021</string>
     <string name="Description3">Spinner Open Tour 2021 will start on 21st August 2021.  Confirm your participation!</string>
     <string name="swtBtn">I\'m going</string>
-
-
     <string name="textBTN">Text</string>
     <string name="searchBtn1">Search</string>
     <string name="editBtn">Edit</string>
@@ -211,7 +204,6 @@
     <string name="shipping_cost_500rs_included">Shipping Cost : 500Rs included</string>
     <string name="calculate">Calculate</string>
     <string name="estimated_cost">Estimated Cost :</string>
-
     <string-array name="bikes">
         <item>BMX Drift -  Price 12K</item>
         <item>TomaHawk Xander - Price 34K</item>
@@ -219,11 +211,9 @@
         <item>Lion Rage - Price 32K</item>
         <item>BigSur Blue - Price 56K</item>
     </string-array>
-
     <string-array name="status">
         <item>1</item>
         <item>2</item>
         <item>3</item>
     </string-array>
-
 </resources>
