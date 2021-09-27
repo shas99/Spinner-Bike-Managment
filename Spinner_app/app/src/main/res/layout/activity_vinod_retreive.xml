@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -25,9 +26,9 @@
             android:id="@+id/nametextvinod"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/cham1vinod"
-            android:text="Event"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/cham1vinod"
+            android:text="@string/event"
             android:textColor="#000"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -40,9 +41,9 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/nametextvinod"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/cham1vinod"
-            android:text="Start"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/cham1vinod"
+            android:text="@string/startTime"
             android:textColor="#000"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -54,10 +55,10 @@
             android:layout_width="25dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/nametextvinod"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/nametext2vinod"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/nametext2vinod"
             android:textAlignment="center"
-            android:text="-"
+            android:text="@string/dashmark"
             android:textColor="#000"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -69,9 +70,9 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/nametextvinod"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/nametext2vinod11"
-            android:text="End"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/nametext2vinod11"
+            android:text="@string/Eend"
             android:textColor="#000"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -84,9 +85,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/nametext2vinod"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/cham1vinod"
-            android:text="More Info"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/cham1vinod"
+            android:text="@string/Emore_info"
             android:textColor="#000"
             android:textSize="14sp"
 
@@ -99,11 +100,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/nametext3vinod"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/cham1vinod"
-            android:text="Status"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/cham1vinod"
+            android:text="@string/Estatus"
             android:textColor="#000"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:textStyle="bold"
 
             />
@@ -115,37 +116,64 @@
             android:layout_below="@+id/nametext3vinod145"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btnEditvinod"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
-                android:text="Update Status"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="#009FFD"
+                android:text="@string/update_status"
                 android:textAllCaps="false"
-                android:layout_marginRight="5dp"
-                android:id="@+id/btnEditvinod"/>
+                android:textColor="#FFFFFF"
+                tools:ignore="TextContrastCheck" />
 
             <Button
+                android:id="@+id/btnDeletevinod"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
-                android:text="Delete"
+                android:layout_marginStart="5dp"
+                android:backgroundTint="#009FFD"
+                android:text="@string/Edelete"
                 android:textAllCaps="false"
-                android:layout_marginLeft="5dp"
-                android:id="@+id/btnDeletevinod"/>
+                android:textColor="#FFFFFF"
+                tools:ignore="TextContrastCheck" />
 
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/RemainingTxt546"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="30dp"
-            android:text="testing"
-            android:textColor="#000000" />
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/cham1vinod"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="1dp"
+            android:paddingStart="-21dp">
+
+            <TextView
+                android:id="@+id/RemainingTxt546"
+                android:layout_width="26dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:width="15dp"
+                android:text="@string/E_100"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView234"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/Ed_remainig" />
+
+
+        </LinearLayout>
 
     </RelativeLayout>
 

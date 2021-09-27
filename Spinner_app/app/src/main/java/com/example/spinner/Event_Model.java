@@ -2,13 +2,16 @@ package com.example.spinner;
 
 public class Event_Model {
 
+    //Database variables
     String name,Start,End,Web,Banner,Status;
 
+
+    //default constructor for firebase
     public Event_Model() {
     }
 
 
-
+    //constructors
     public Event_Model(String name, String start, String end, String web, String banner, String status) {
         this.name = name;
         Start = start;
@@ -18,6 +21,8 @@ public class Event_Model {
         Status = status;
     }
 
+
+    //Getters and Setters
     public String getEnd() {
         return End;
     }
