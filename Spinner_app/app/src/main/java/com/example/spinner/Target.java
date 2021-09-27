@@ -41,10 +41,15 @@ public class Target extends AppCompatActivity {
 
 
     private boolean isChaged(){
+        EditText txtname = findViewById(R.id.emailInput);
+        String name = txtname.getText().toString();
+        if (txtname.length() == 0) {
+            txtname.setError("This field is required");
+            reference.child(UserDetails.ID()).child("Target").setValue("0");
+        return false;
+        }else if(!UserDetails.getTarget().equals(z)){
 
-        if(!UserDetails.getTarget().equals(z)){
-            EditText txtname = findViewById(R.id.emailInput);
-            String name = txtname.getText().toString();
+
 
 
 
